@@ -1,0 +1,7244 @@
+{
+  "source_commit": "e5144dd38cb9161d8ebbf6a7d06f1698a20a4901",
+  "addons": [
+    {
+      "module": "account",
+      "name": "Invoicing",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "base_setup",
+        "onboarding",
+        "product",
+        "analytic",
+        "portal",
+        "digest"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_add_gln",
+      "name": "Add Partner GLN",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_check_printing",
+      "name": "Check Printing Base",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_debit_note",
+      "name": "Debit Notes",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_edi",
+      "name": "Import/Export Invoices From XML/PDF",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_edi_proxy_client",
+      "name": "Proxy features for account_edi",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account",
+        "certificate"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "name": "Import/Export electronic invoices with UBL/CII",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_fleet",
+      "name": "Accounting/Fleet bridge",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "fleet",
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_payment",
+      "name": "Payment - Account",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account",
+        "payment"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_peppol",
+      "name": "Peppol",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account_edi_proxy_client",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account_edi_ubl_cii"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_peppol_advanced_fields",
+      "name": "[DEPRECATED] Account Peppol Advanced Fields",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_peppol_response",
+      "name": "Peppol Business Response",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account_peppol"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_qr_code_emv",
+      "name": "account_qr_code_emv",
+      "category": "Accounting/Payment",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_qr_code_sepa",
+      "name": "Account SEPA QR Code",
+      "category": "Accounting/Payment",
+      "depends": [
+        "account",
+        "base_iban"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_tax_python",
+      "name": "Define Taxes as Python Code",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_test",
+      "name": "Accounting Consistency Tests",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "account_update_tax_tags",
+      "name": "Account - Allow updating tax grids",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "analytic",
+      "name": "Analytic Accounting",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "base",
+        "mail",
+        "uom"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "api_doc",
+      "name": "API Documentation",
+      "category": "Hidden",
+      "depends": [
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "attachment_indexation",
+      "name": "Attachments List and Document Indexation",
+      "category": "Hidden/Tools",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_ldap",
+      "name": "Authentication via LDAP",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base",
+        "base_setup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_oauth",
+      "name": "OAuth2 Authentication",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base",
+        "web",
+        "base_setup",
+        "auth_signup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_passkey",
+      "name": "Passkeys",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base_setup",
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_passkey_portal",
+      "name": "Passkeys Portal",
+      "category": "Hidden/Tools",
+      "depends": [
+        "auth_passkey",
+        "portal"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_password_policy",
+      "name": "Password Policy",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base_setup",
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_password_policy_portal",
+      "name": "Password Policy support for Signup",
+      "category": "Tools",
+      "depends": [
+        "auth_password_policy",
+        "portal"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_password_policy_signup",
+      "name": "Password Policy support for Signup",
+      "category": "Hidden/Tools",
+      "depends": [
+        "auth_password_policy",
+        "auth_signup"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_signup",
+      "name": "Signup",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base_setup",
+        "mail",
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_timeout",
+      "name": "Auth Timeout",
+      "category": "Hidden/Tools",
+      "depends": [
+        "auth_totp",
+        "auth_totp_mail",
+        "auth_passkey",
+        "bus"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_totp",
+      "name": "Two-Factor Authentication (TOTP)",
+      "category": "Extra Tools",
+      "depends": [
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_totp_mail",
+      "name": "2FA Invite mail",
+      "category": "Extra Tools",
+      "depends": [
+        "auth_totp",
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "auth_totp_portal",
+      "name": "TOTPortal",
+      "category": "Hidden",
+      "depends": [
+        "portal",
+        "auth_totp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "barcodes",
+      "name": "Barcode",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "barcodes_gs1_nomenclature",
+      "name": "Barcode - GS1 Nomenclature",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "barcodes",
+        "uom"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_address_extended",
+      "name": "Extended Addresses",
+      "category": "Sales/Sales",
+      "depends": [
+        "base",
+        "contacts"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_automation",
+      "name": "Automation Rules",
+      "category": "Sales/Sales",
+      "depends": [
+        "base",
+        "digest",
+        "resource",
+        "mail",
+        "sms"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_geolocalize",
+      "name": "Partners Geolocation",
+      "category": "Sales/Sales",
+      "depends": [
+        "base_setup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_iban",
+      "name": "IBAN Bank Accounts",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account",
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_import",
+      "name": "Base import",
+      "category": "Hidden/Tools",
+      "depends": [
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_import_module",
+      "name": "Base import module",
+      "category": "Hidden/Tools",
+      "depends": [
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_install_request",
+      "name": "Base - Module Install Request",
+      "category": "Hidden",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_setup",
+      "name": "Initial Setup Tools",
+      "category": "Hidden",
+      "depends": [
+        "base",
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_sparse_field",
+      "name": "Sparse Fields",
+      "category": "Hidden",
+      "depends": [
+        "base"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "base_vat",
+      "name": "VAT Number Validation",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "board",
+      "name": "Dashboards",
+      "category": "Productivity",
+      "depends": [
+        "spreadsheet_dashboard"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "bus",
+      "name": "IM Bus",
+      "category": "Hidden",
+      "depends": [
+        "base",
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "calendar",
+      "name": "Calendar",
+      "category": "Productivity/Calendar",
+      "depends": [
+        "base",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "calendar_sms",
+      "name": "Calendar - SMS",
+      "category": "Productivity/Calendar",
+      "depends": [
+        "calendar",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "certificate",
+      "name": "Certificate",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base_setup"
+      ],
+      "auto_install": false,
+      "license": "OEEL-1"
+    },
+    {
+      "module": "cloud_storage",
+      "name": "Cloud Storage",
+      "category": "Technical Settings",
+      "depends": [
+        "base_setup",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "cloud_storage_azure",
+      "name": "Cloud Storage Azure",
+      "category": "Technical Settings",
+      "depends": [
+        "cloud_storage"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "cloud_storage_google",
+      "name": "Cloud Storage Google",
+      "category": "Technical Settings",
+      "depends": [
+        "cloud_storage"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "cloud_storage_migration",
+      "name": "Cloud Storage Migration",
+      "category": "Technical Settings",
+      "depends": [
+        "cloud_storage"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "contacts",
+      "name": "Contacts",
+      "category": "Sales/CRM",
+      "depends": [
+        "base",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "crm",
+      "name": "CRM",
+      "category": "Sales/CRM",
+      "depends": [
+        "base_setup",
+        "sales_team",
+        "mail",
+        "calendar",
+        "resource",
+        "utm",
+        "web_tour",
+        "contacts",
+        "digest",
+        "phone_validation"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "crm_iap_enrich",
+      "name": "Lead Enrichment",
+      "category": "Sales/CRM",
+      "depends": [
+        "iap_crm",
+        "iap_mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "crm_iap_mine",
+      "name": "Lead Generation",
+      "category": "Sales/CRM",
+      "depends": [
+        "iap_crm",
+        "iap_mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "crm_livechat",
+      "name": "CRM Livechat",
+      "category": "Sales/CRM",
+      "depends": [
+        "crm",
+        "im_livechat"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "crm_mail_plugin",
+      "name": "CRM Mail Plugin",
+      "category": "Sales/CRM",
+      "depends": [
+        "crm",
+        "mail_plugin"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "crm_sms",
+      "name": "SMS in CRM",
+      "category": "Sales/CRM",
+      "depends": [
+        "crm",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "data_recycle",
+      "name": "Data Recycle",
+      "category": "Productivity/Data Cleaning",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "delivery",
+      "name": "Delivery Costs",
+      "category": "Sales/Delivery",
+      "depends": [
+        "sale",
+        "payment_custom"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "delivery_mondialrelay",
+      "name": "delivery_mondialrelay",
+      "category": "Shipping Connectors",
+      "depends": [
+        "stock_delivery"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "delivery_stock_picking_batch",
+      "name": "Delivery Stock Picking Batch",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock_delivery",
+        "stock_picking_batch"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "digest",
+      "name": "KPI Digests",
+      "category": "Marketing",
+      "depends": [
+        "mail",
+        "portal",
+        "resource"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event",
+      "name": "Events Organization",
+      "category": "Marketing/Events",
+      "depends": [
+        "barcodes",
+        "base_setup",
+        "mail",
+        "phone_validation",
+        "portal",
+        "utm"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_booth",
+      "name": "Events Booths",
+      "category": "Marketing/Events",
+      "depends": [
+        "event"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_booth_sale",
+      "name": "Events Booths Sales",
+      "category": "Marketing/Events",
+      "depends": [
+        "event_booth",
+        "event_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_crm",
+      "name": "Event CRM",
+      "category": "Marketing/Events",
+      "depends": [
+        "event",
+        "crm"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_crm_sale",
+      "name": "Event CRM Sale",
+      "category": "Marketing/Events",
+      "depends": [
+        "event_crm",
+        "event_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_product",
+      "name": "Events Product",
+      "category": "Marketing/Events",
+      "depends": [
+        "event",
+        "product",
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_sale",
+      "name": "Events Sales",
+      "category": "Marketing/Events",
+      "depends": [
+        "event_product",
+        "sale_management"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "event_sms",
+      "name": "SMS on Events",
+      "category": "Marketing/Events",
+      "depends": [
+        "event",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "fleet",
+      "name": "Fleet",
+      "category": "Human Resources/Fleet",
+      "depends": [
+        "base",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "gamification",
+      "name": "Gamification",
+      "category": "Human Resources",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "gamification_sale_crm",
+      "name": "CRM Gamification",
+      "category": "Sales/CRM",
+      "depends": [
+        "gamification",
+        "sale_crm"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "google_account",
+      "name": "Google Users",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base_setup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "google_address_autocomplete",
+      "name": "Google Address Autocomplete",
+      "category": "Hidden/Tools",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "google_calendar",
+      "name": "Google Calendar",
+      "category": "Productivity",
+      "depends": [
+        "google_account",
+        "calendar"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "google_gmail",
+      "name": "Google Gmail",
+      "category": "Hidden",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "google_recaptcha",
+      "name": "Google reCAPTCHA integration",
+      "category": "Hidden",
+      "depends": [
+        "base_setup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr",
+      "name": "Employees",
+      "category": "Human Resources/Employees",
+      "depends": [
+        "base_setup",
+        "digest",
+        "phone_validation",
+        "resource_mail",
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_attendance",
+      "name": "Attendances",
+      "category": "Human Resources/Attendances",
+      "depends": [
+        "hr",
+        "barcodes",
+        "base_geolocalize"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_calendar",
+      "name": "Display Working Hours in Calendar",
+      "category": "Human Resources/Employees",
+      "depends": [
+        "hr",
+        "calendar"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_expense",
+      "name": "Expenses",
+      "category": "Human Resources/Expenses",
+      "depends": [
+        "account",
+        "web_tour",
+        "hr"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_fleet",
+      "name": "Fleet History",
+      "category": "Human Resources",
+      "depends": [
+        "hr",
+        "fleet"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_gamification",
+      "name": "HR Gamification",
+      "category": "Human Resources",
+      "depends": [
+        "gamification",
+        "hr"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_holidays",
+      "name": "Time Off",
+      "category": "Human Resources/Time Off",
+      "depends": [
+        "hr",
+        "calendar",
+        "resource"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_holidays_attendance",
+      "name": "HR Attendance Holidays",
+      "category": "Human Resources",
+      "depends": [
+        "hr_attendance",
+        "hr_holidays"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_holidays_homeworking",
+      "name": "Holidays with Remote Work",
+      "category": "Human Resources",
+      "depends": [
+        "hr_holidays",
+        "hr_homeworking"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_homeworking",
+      "name": "Remote Work",
+      "category": "Human Resources/Remote Work",
+      "depends": [
+        "hr"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_homeworking_calendar",
+      "name": "Remote Work with calendar",
+      "category": "Human Resources/Remote Work",
+      "depends": [
+        "hr_homeworking",
+        "calendar"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_hourly_cost",
+      "name": "Employee Hourly Wage",
+      "category": "Services/Employee Hourly Cost",
+      "depends": [
+        "hr"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_livechat",
+      "name": "HR - Livechat",
+      "category": "Human Resources",
+      "depends": [
+        "hr",
+        "im_livechat"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_maintenance",
+      "name": "Maintenance - HR",
+      "category": "Human Resources",
+      "depends": [
+        "hr",
+        "maintenance"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_org_chart",
+      "name": "HR Org Chart",
+      "category": "Human Resources",
+      "depends": [
+        "hr",
+        "web_hierarchy"
+      ],
+      "auto_install": [
+        "hr"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_presence",
+      "name": "Employee Presence Control",
+      "category": "Human Resources",
+      "depends": [
+        "hr",
+        "hr_holidays",
+        "sms"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_recruitment",
+      "name": "Recruitment",
+      "category": "Human Resources/Recruitment",
+      "depends": [
+        "hr",
+        "calendar",
+        "utm",
+        "attachment_indexation",
+        "web_tour",
+        "digest"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_recruitment_skills",
+      "name": "Recruitment - Skills Management",
+      "category": "Human Resources/Recruitment",
+      "depends": [
+        "hr_skills",
+        "hr_recruitment"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_recruitment_sms",
+      "name": "Recruitment - SMS",
+      "category": "Human Resources/Recruitment",
+      "depends": [
+        "hr_recruitment",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_recruitment_survey",
+      "name": "Hr Recruitment Interview Forms",
+      "category": "Human Resources",
+      "depends": [
+        "survey",
+        "hr_recruitment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_skills",
+      "name": "Skills Management",
+      "category": "Human Resources/Employees",
+      "depends": [
+        "hr"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_skills_event",
+      "name": "Skills Events",
+      "category": "Hidden",
+      "depends": [
+        "hr_skills",
+        "event"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_skills_slides",
+      "name": "Skills e-learning",
+      "category": "Human Resources/Employees",
+      "depends": [
+        "hr_skills",
+        "website_slides"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_skills_survey",
+      "name": "Skills Certification",
+      "category": "Human Resources/Employees",
+      "depends": [
+        "hr_skills",
+        "survey"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_timesheet",
+      "name": "Task Logs",
+      "category": "Services/Timesheets",
+      "depends": [
+        "hr",
+        "hr_hourly_cost",
+        "analytic",
+        "project",
+        "uom"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_timesheet_attendance",
+      "name": "Timesheets/attendances reporting",
+      "category": "Human Resources/Attendances",
+      "depends": [
+        "hr_timesheet",
+        "hr_attendance"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_work_entry",
+      "name": "Work Entries",
+      "category": "Human Resources/Employees",
+      "depends": [
+        "hr"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "hr_work_entry_holidays",
+      "name": "Time Off in Payslips",
+      "category": "Human Resources/Payroll",
+      "depends": [
+        "hr_holidays",
+        "hr_work_entry"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "html_builder",
+      "name": "HTML Builder",
+      "category": "Uncategorized",
+      "depends": [
+        "base",
+        "html_editor",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "html_editor",
+      "name": "HTML Editor",
+      "category": "Hidden",
+      "depends": [
+        "base",
+        "bus",
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "http_routing",
+      "name": "Web Routing",
+      "category": "Hidden",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "iap",
+      "name": "In-App Purchases",
+      "category": "Hidden/Tools",
+      "depends": [
+        "web",
+        "base_setup"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "iap_crm",
+      "name": "IAP / CRM",
+      "category": "Hidden/Tools",
+      "depends": [
+        "crm",
+        "iap_mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "iap_mail",
+      "name": "IAP / Mail",
+      "category": "Hidden/Tools",
+      "depends": [
+        "iap",
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "im_livechat",
+      "name": "Live Chat",
+      "category": "Website/Live Chat",
+      "depends": [
+        "mail",
+        "rating",
+        "digest",
+        "utm"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "iot_base",
+      "name": "IoT Base",
+      "category": "Hidden",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "iot_box_image",
+      "name": "IoT Box Image Build Tools",
+      "category": "Hidden/Tools",
+      "depends": [],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "iot_drivers",
+      "name": "Hardware Proxy",
+      "category": "Hidden",
+      "depends": [],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_account_edi_ubl_cii_tests",
+      "name": "Testing the Import/Export invoices with UBL/CII",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account_edi_ubl_cii",
+        "l10n_fr_account",
+        "l10n_be",
+        "l10n_de",
+        "l10n_nl",
+        "l10n_au"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_account_withholding_tax",
+      "name": "Withholding Tax on Payment",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_account_withholding_tax_pos",
+      "name": "Withholding Tax on Payment - PoS",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_account_withholding_tax",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ae",
+      "name": "United Arab Emirates - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_gcc_invoice"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ae_pos",
+      "name": "United Arab Emirates - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_gcc_pos",
+        "l10n_ae"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_anz_ubl_pint",
+      "name": "Australia & New Zealand - UBL PINT",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ar",
+      "name": "Argentina - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_latam_invoice_document",
+        "l10n_latam_base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ar_pos",
+      "name": "Argentinean - Point of Sale with AR Doc",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_ar",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ar_stock",
+      "name": "Argentinean - Stock",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_ar",
+        "stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ar_website_sale",
+      "name": "Argentinean eCommerce",
+      "category": "Accounting/Localizations/Website",
+      "depends": [
+        "website_sale",
+        "l10n_ar"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ar_withholding",
+      "name": "Argentina - Payment Withholdings",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_ar",
+        "l10n_latam_check"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_at",
+      "name": "Austria - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii",
+        "base_iban",
+        "base_vat",
+        "l10n_din5008"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_au",
+      "name": "Australia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bd",
+      "name": "Bangladesh - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_be",
+      "name": "Belgium - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii",
+        "base_iban",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_be_pos_restaurant",
+      "name": "Belgian POS Restaurant Localization",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_restaurant",
+        "l10n_be"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_be_pos_sale",
+      "name": "l10n_be_pos_sale",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_sale",
+        "l10n_be"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bf",
+      "name": "Burkina Faso - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bg",
+      "name": "Bulgaria - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bg_ledger",
+      "name": "Bulgaria - Report ledger",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_bg"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bh",
+      "name": "Bahrain - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_gcc_invoice"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bj",
+      "name": "Benin - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_bo",
+      "name": "Bolivia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_br",
+      "name": "Brazilian - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_qr_code_emv",
+        "base_address_extended",
+        "l10n_latam_base",
+        "l10n_latam_invoice_document"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_br_sales",
+      "name": "Brazil - Sale",
+      "category": "Sales/Sales",
+      "depends": [
+        "l10n_br",
+        "sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_br_website_sale",
+      "name": "Brazil - Website Sale",
+      "category": "Sales/Sales",
+      "depends": [
+        "l10n_br",
+        "website_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ca",
+      "name": "Canada - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cd",
+      "name": "Democratic Republic of the Congo - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cf",
+      "name": "Central African Republic - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cg",
+      "name": "Congo - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ch",
+      "name": "Switzerland - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii",
+        "base_iban",
+        "l10n_din5008"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ch_pos",
+      "name": "Swiss - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_ch",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ci",
+      "name": "Ivory Coast - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cl",
+      "name": "Chile - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "contacts",
+        "base_vat",
+        "l10n_latam_base",
+        "l10n_latam_invoice_document",
+        "uom",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cm",
+      "name": "Cameroon - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cn",
+      "name": "China - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cn_city",
+      "name": "China - City Data",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_cn",
+        "base_address_extended"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_co",
+      "name": "Colombia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_debit_note",
+        "l10n_latam_base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_co_pos",
+      "name": "Colombian - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_co",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cr",
+      "name": "Costa Rica - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cy",
+      "name": "Cyprus - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_cz",
+      "name": "Czech - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii",
+        "base_iban",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_de",
+      "name": "Germany - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "l10n_din5008",
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_din5008",
+      "name": "DIN 5008",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_din5008_expense",
+      "name": "DIN 5008 - Expenses",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_din5008",
+        "hr_expense"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_din5008_purchase",
+      "name": "DIN 5008 - Purchase",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_din5008",
+        "purchase"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_din5008_repair",
+      "name": "DIN 5008 - Repair",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_din5008",
+        "repair"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_din5008_sale",
+      "name": "DIN 5008 - Sale",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_din5008",
+        "sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_din5008_stock",
+      "name": "DIN 5008 - Stock",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_din5008",
+        "stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_dk",
+      "name": "Denmark - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_dk_fik",
+      "name": "Denmark - FIK Number",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_dk"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_dk_nemhandel",
+      "name": "Denmark EDI - Nemhandel",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_proxy_client",
+        "account_edi_ubl_cii",
+        "l10n_dk"
+      ],
+      "auto_install": [
+        "account_edi_ubl_cii",
+        "l10n_dk"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_dk_nemhandel_response",
+      "name": "Nemhandel Business Response",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_dk_nemhandel"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_dk_oioubl",
+      "name": "Denmark - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii",
+        "l10n_dk"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_do",
+      "name": "Dominican Republic - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_dz",
+      "name": "Algeria - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_vat",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ec",
+      "name": "Ecuadorian Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "base_iban",
+        "account_debit_note",
+        "l10n_latam_invoice_document",
+        "l10n_latam_base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ec_sale",
+      "name": "Ecuador - Sale",
+      "category": "Accounting/Localizations/Sale",
+      "depends": [
+        "l10n_ec",
+        "sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ec_stock",
+      "name": "Ecuador - Stock",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_ec",
+        "stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ee",
+      "name": "Estonia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_eg",
+      "name": "Egypt - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_eg_edi_eta",
+      "name": "Egypt E-Invoicing",
+      "category": "account",
+      "depends": [
+        "account_edi",
+        "l10n_eg"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es",
+      "name": "Spain - Accounting (PGCE 2008)",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_edi_facturae",
+      "name": "Spain - Facturae EDI",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "certificate",
+        "l10n_es"
+      ],
+      "auto_install": [
+        "l10n_es"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_edi_sii",
+      "name": "Spain - SII EDI Suministro de Libros",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "certificate",
+        "l10n_es",
+        "account_edi"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_edi_tbai",
+      "name": "Spain - TicketBAI",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_es",
+        "certificate"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_edi_tbai_pos",
+      "name": "Spain - Point of Sale + TicketBAI",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_es_edi_tbai",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_edi_verifactu",
+      "name": "Spain - Veri*Factu",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_es"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_edi_verifactu_pos",
+      "name": "Spain - Veri*Factu for Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_es_edi_verifactu",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_es_pos",
+      "name": "[Deprecated] Spain - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "l10n_es"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_et",
+      "name": "Ethiopia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_eu_oss",
+      "name": "EU One Stop Shop (OSS)",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fi",
+      "name": "Finland - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fi_sale",
+      "name": "Finland - Sale",
+      "category": "Sales/Sales",
+      "depends": [
+        "l10n_fi",
+        "sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fr",
+      "name": "France - Localizations",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fr_account",
+      "name": "France - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account",
+        "account_edi_ubl_cii",
+        "l10n_fr"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fr_facturx_chorus_pro",
+      "name": "France - BIS3 integration for Chorus Pro",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii",
+        "l10n_fr_account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fr_hr_holidays",
+      "name": "France - Time Off",
+      "category": "Human Resources/Time Off",
+      "depends": [
+        "hr_holidays"
+      ],
+      "auto_install": [
+        "hr_holidays"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fr_hr_work_entry_holidays",
+      "name": "France - Work Entries Time Off",
+      "category": "",
+      "depends": [
+        "l10n_fr_hr_holidays",
+        "hr_work_entry_holidays"
+      ],
+      "auto_install": [
+        "hr_work_entry_holidays"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_fr_pos_cert",
+      "name": "France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_fr_account",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ga",
+      "name": "Gabon - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gcc_invoice",
+      "name": "Gulf Cooperation Council - Invoice",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gcc_invoice_stock_account",
+      "name": "Gulf Cooperation Council WMS Accounting",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_gcc_invoice",
+        "stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gcc_pos",
+      "name": "Gulf Cooperation Council - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "l10n_gcc_invoice"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gn",
+      "name": "Guinea - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gq",
+      "name": "Guinea Equatorial - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gr",
+      "name": "Greece - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gr_edi",
+      "name": "Greece - myDATA",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_gr"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gt",
+      "name": "Guatemala - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_gw",
+      "name": "Guinea-Bissau - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_hk",
+      "name": "Hong Kong - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_qr_code_emv",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_hn",
+      "name": "Honduras - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_hr",
+      "name": "Croatia - Accounting (Euro)",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_hr_edi",
+      "name": "Croatia - e-invoicing",
+      "category": "Accounting/Localizations/Reporting",
+      "depends": [
+        "l10n_hr",
+        "account_edi_ubl_cii",
+        "account_peppol"
+      ],
+      "auto_install": false,
+      "license": "OEEL-1"
+    },
+    {
+      "module": "l10n_hr_kuna",
+      "name": "Croatia - Accounting (Kuna)",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_hu",
+      "name": "Hungary - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_hu_edi",
+      "name": "Hungary - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_debit_note",
+        "base_iban",
+        "l10n_hu"
+      ],
+      "auto_install": [
+        "l10n_hu"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_id",
+      "name": "Indonesian - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_id_efaktur_coretax",
+      "name": "Indonesia E-faktur (Coretax)",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_id"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_id_pos",
+      "name": "Indonesia - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_id",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ie",
+      "name": "Ireland - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_il",
+      "name": "Israel - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in",
+      "name": "Indian - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_tax_python",
+        "base_vat",
+        "account_debit_note",
+        "account",
+        "iap"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_edi",
+      "name": "Indian - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi",
+        "l10n_in"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_ewaybill",
+      "name": "Indian - E-waybill",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_in"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_ewaybill_irn",
+      "name": "Indian - E-waybill thru IRN",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_in_ewaybill",
+        "l10n_in_edi"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_ewaybill_stock",
+      "name": "Indian - E-waybill Stock",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_in_stock",
+        "l10n_in_ewaybill"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_hr_holidays",
+      "name": "India - Time Off",
+      "category": "Human Resources/Time Off",
+      "depends": [
+        "hr_holidays"
+      ],
+      "auto_install": [
+        "hr_holidays"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_pos",
+      "name": "Indian - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_in",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_purchase_stock",
+      "name": "India Purchase and Warehouse Management",
+      "category": "Accounting/Localizations/Purchase",
+      "depends": [
+        "l10n_in_stock",
+        "purchase_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_sale",
+      "name": "Indian - Sale Report(GST)",
+      "category": "Accounting/Localizations/Sale",
+      "depends": [
+        "l10n_in",
+        "sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_sale_stock",
+      "name": "India Sales and Warehouse Management",
+      "category": "Accounting/Localizations/Sale",
+      "depends": [
+        "l10n_in_sale",
+        "l10n_in_stock",
+        "sale_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_in_stock",
+      "name": "Indian - Stock Report(GST)",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_in",
+        "stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_iq",
+      "name": "Iraq - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_it",
+      "name": "Italy - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_it_edi",
+      "name": "Italy - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_it",
+        "account_edi_proxy_client",
+        "account_debit_note"
+      ],
+      "auto_install": [
+        "l10n_it"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_it_edi_doi",
+      "name": "Italy - Declaration of Intent",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_it_edi",
+        "sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_it_edi_sale",
+      "name": "Italy - Sale E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_it_edi",
+        "sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_it_stock_ddt",
+      "name": "Italy - Stock DDT",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_it_edi",
+        "stock_delivery",
+        "stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_jo",
+      "name": "Jordan - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_jo_edi",
+      "name": "Jordan E-Invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii",
+        "l10n_jo"
+      ],
+      "auto_install": [
+        "l10n_jo"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_jo_edi_pos",
+      "name": "Jordan Accounting EDI for POS",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_jo_edi",
+        "pos_edi_ubl"
+      ],
+      "auto_install": true,
+      "license": "OEEL-1"
+    },
+    {
+      "module": "l10n_jp",
+      "name": "Japan - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_jp_ubl_pint",
+      "name": "Japan - UBL PINT",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ke",
+      "name": "Kenya - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ke_edi_tremol",
+      "name": "Kenya Tremol Device EDI Integration",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_ke"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_kh",
+      "name": "Cambodia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_qr_code_emv",
+        "l10n_account_withholding_tax"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_km",
+      "name": "Comoros - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_kr",
+      "name": "Republic of Korea - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_kw",
+      "name": "Kuwait - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_gcc_invoice"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_kz",
+      "name": "Kazakhstan - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_latam_base",
+      "name": "LATAM Localization Base",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "contacts",
+        "base_vat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_latam_check",
+      "name": "Third Party and Deferred/Electronic Checks Management",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_latam_invoice_document",
+      "name": "LATAM Document",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "account",
+        "account_debit_note"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_lb_account",
+      "name": "Lebanon - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_lk",
+      "name": "Sri Lanka - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_account_withholding_tax"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_lt",
+      "name": "Lithuania - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_lu",
+      "name": "Luxembourg - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_lv",
+      "name": "Latvia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ma",
+      "name": "Morocco - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mc",
+      "name": "Monaco - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_fr_account",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ml",
+      "name": "Mali - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mn",
+      "name": "Mongolia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mr",
+      "name": "Mauritania - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mt",
+      "name": "Malta - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mt_pos",
+      "name": "Malta - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mu_account",
+      "name": "Mauritius - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mx",
+      "name": "Mexico - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_my",
+      "name": "Malaysia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "account_tax_python"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_my_edi",
+      "name": "Malaysia - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_my",
+        "l10n_my_ubl_pint",
+        "account_edi_proxy_client"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_my_edi_pos",
+      "name": "Malaysia - E-invoicing (POS)",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_my_edi",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_my_ubl_pint",
+      "name": "Malaysia - UBL PINT",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_mz",
+      "name": "Mozambique - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ne",
+      "name": "Niger - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ng",
+      "name": "Nigeria - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_vat",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_nl",
+      "name": "Netherlands - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_no",
+      "name": "Norway - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_nz",
+      "name": "New Zealand - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_om",
+      "name": "Oman - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_gcc_invoice"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pa",
+      "name": "Panama - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pe",
+      "name": "Peru - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_vat",
+        "base_address_extended",
+        "l10n_latam_base",
+        "l10n_latam_invoice_document",
+        "account_debit_note",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pe_pos",
+      "name": "Peruvian - Point of Sale with Pe Doc",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_pe",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ph",
+      "name": "Philippines - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat",
+        "l10n_account_withholding_tax"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pk",
+      "name": "Pakistan - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pl",
+      "name": "Poland - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pl_bank_verification",
+      "name": "Poland - Accounting - Bank Account Verification",
+      "category": "",
+      "depends": [
+        "l10n_pl"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pl_edi",
+      "name": "Polish E-Invoicing FA(3)",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_pl",
+        "certificate"
+      ],
+      "auto_install": [
+        "l10n_pl"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_pt",
+      "name": "Portugal - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base",
+        "account",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_qa",
+      "name": "Qatar - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_gcc_invoice"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ro",
+      "name": "Romania - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ro_cpv_code",
+      "name": "Romania - CPV Code",
+      "category": "Hidden",
+      "depends": [
+        "l10n_ro_edi"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ro_edi",
+      "name": "Romania - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii",
+        "l10n_ro"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ro_edi_stock",
+      "name": "Romania - E-Transport",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "stock_delivery",
+        "l10n_ro_edi",
+        "stock_picking_batch"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ro_edi_stock_batch",
+      "name": "Romania - E-Transport Batch Pickings",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_ro_edi_stock",
+        "stock_picking_batch"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_rs",
+      "name": "Serbia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_rs_edi",
+      "name": "Serbia - eFaktura E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii",
+        "l10n_rs"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_rw",
+      "name": "Rwanda - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sa",
+      "name": "Saudi Arabia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_gcc_invoice",
+        "account",
+        "account_debit_note"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sa_edi",
+      "name": "Saudi Arabia - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi",
+        "account_edi_ubl_cii",
+        "l10n_sa",
+        "base_vat",
+        "certificate"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sa_edi_pos",
+      "name": "Saudi Arabia - E-invoicing (Simplified)",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_sa_pos",
+        "l10n_sa_edi"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sa_pos",
+      "name": "Saudi Arabia - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_gcc_pos",
+        "l10n_sa"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sa_withholding_tax",
+      "name": "Saudi Arabia - Withholding Tax",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_account_withholding_tax",
+        "l10n_sa"
+      ],
+      "auto_install": [
+        "l10n_sa"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_se",
+      "name": "Sweden - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sg",
+      "name": "Singapore - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_qr_code_emv",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sg_ubl_pint",
+      "name": "Singapore - UBL PINT",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_si",
+      "name": "Slovenian - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sk",
+      "name": "Slovak - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base_iban",
+        "base_vat",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_sn",
+      "name": "S\u00e9n\u00e9gal - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_syscohada",
+      "name": "OHADA - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_td",
+      "name": "Tchad - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_test_pos_qr_payment",
+      "name": "POS QR Tests",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "account_qr_code_sepa",
+        "l10n_be",
+        "l10n_ch",
+        "l10n_hk",
+        "l10n_br"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tg",
+      "name": "Togo - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_syscohada",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_th",
+      "name": "Thailand - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_qr_code_emv",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tn",
+      "name": "Tunisia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tr",
+      "name": "T\u00fcrkiye - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tr_nilvera",
+      "name": "T\u00fcrkiye - Nilvera",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "l10n_tr"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tr_nilvera_base_vat",
+      "name": "T\u00fcrkiye - Nilvera/Base VAT",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "l10n_tr_nilvera",
+        "base_vat"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tr_nilvera_edispatch",
+      "name": "T\u00fcrkiye - e-Irsaliye (e-Dispatch)",
+      "category": "Accounting/Localizations",
+      "depends": [
+        "l10n_tr_nilvera",
+        "stock"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tr_nilvera_einvoice",
+      "name": "T\u00fcrkiye - Nilvera E-Invoice",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "l10n_tr_nilvera",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": [
+        "l10n_tr_nilvera"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tr_nilvera_einvoice_extended",
+      "name": "T\u00fcrkiye - Nilvera E-Invoice Extended",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "l10n_tr_nilvera_einvoice",
+        "contacts"
+      ],
+      "auto_install": [
+        "l10n_tr_nilvera_einvoice"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tw",
+      "name": "Taiwan - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_address_extended"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tw_edi_ecpay",
+      "name": "Taiwan - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_tw",
+        "base_vat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tw_edi_ecpay_website_sale",
+      "name": "Taiwan - E-invoicing Ecommerce",
+      "category": "Website Sale/Localizations/EDI",
+      "depends": [
+        "website_sale",
+        "l10n_tw_edi_ecpay"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_tz_account",
+      "name": "Tanzania - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ua",
+      "name": "Ukraine - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ug",
+      "name": "Uganda - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_uk",
+      "name": "United Kingdom - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_iban",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_us",
+      "name": "United States - Localizations",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "base"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_us_account",
+      "name": "United States - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "l10n_us",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_uy",
+      "name": "Uruguay - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "l10n_latam_invoice_document",
+        "l10n_latam_base"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_uy_pos",
+      "name": "Uruguayan - Point of Sale",
+      "category": "Accounting/Localizations/Point of Sale",
+      "depends": [
+        "l10n_uy",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_uz",
+      "name": "Uzbekistan - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_ve",
+      "name": "Venezuela - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_vn",
+      "name": "Vietnam - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account_qr_code_emv",
+        "base_iban",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_vn_edi_viettel",
+      "name": "Vietnam - E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_vn"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_vn_edi_viettel_pos",
+      "name": "Vietnam - POS E-invoicing",
+      "category": "Accounting/Localizations/EDI",
+      "depends": [
+        "l10n_vn_edi_viettel",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_za",
+      "name": "South Africa - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account",
+        "base_vat"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "l10n_zm_account",
+      "name": "Zambia - Accounting",
+      "category": "Accounting/Localizations/Account Charts",
+      "depends": [
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "link_tracker",
+      "name": "Link Tracker",
+      "category": "Marketing",
+      "depends": [
+        "utm",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "loyalty",
+      "name": "Coupons & Loyalty",
+      "category": "Sales",
+      "depends": [
+        "product",
+        "portal",
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "lunch",
+      "name": "Lunch",
+      "category": "Human Resources/Lunch",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mail",
+      "name": "Discuss",
+      "category": "Productivity/Discuss",
+      "depends": [
+        "base",
+        "base_setup",
+        "bus",
+        "web_tour",
+        "html_editor"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mail_bot",
+      "name": "OdooBot",
+      "category": "Productivity/Discuss",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mail_bot_hr",
+      "name": "OdooBot - HR",
+      "category": "Productivity/Discuss",
+      "depends": [
+        "mail_bot",
+        "hr"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mail_group",
+      "name": "Mail Group",
+      "category": "",
+      "depends": [
+        "mail",
+        "portal"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mail_plugin",
+      "name": "Mail Plugin",
+      "category": "Sales/CRM",
+      "depends": [
+        "web",
+        "contacts",
+        "iap"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "maintenance",
+      "name": "Maintenance",
+      "category": "Supply Chain/Maintenance",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "marketing_card",
+      "name": "Marketing Card",
+      "category": "Marketing/Marketing Card",
+      "depends": [
+        "link_tracker",
+        "mass_mailing",
+        "website"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing",
+      "name": "Email Marketing",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "contacts",
+        "mail",
+        "html_builder",
+        "utm",
+        "link_tracker",
+        "social_media",
+        "web_tour",
+        "digest"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_crm",
+      "name": "Mass mailing on lead / opportunities",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "crm",
+        "mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_crm_sms",
+      "name": "Mass mailing sms on lead / opportunities",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "mass_mailing_crm",
+        "mass_mailing_sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_event",
+      "name": "Mass mailing on attendees",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "event",
+        "mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_event_sms",
+      "name": "Event Attendees SMS Marketing",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "event",
+        "mass_mailing",
+        "mass_mailing_event",
+        "mass_mailing_sms",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_event_track",
+      "name": "Mass mailing on track speakers",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "website_event_track",
+        "mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_event_track_sms",
+      "name": "Track Speakers SMS Marketing",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "mass_mailing",
+        "mass_mailing_sms",
+        "sms",
+        "website_event_track"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_sale",
+      "name": "Mass mailing on sale orders",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "sale",
+        "mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_sale_sms",
+      "name": "Mass mailing sms on sale orders",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "mass_mailing_sale",
+        "mass_mailing_sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_slides",
+      "name": "Mass mailing on course members",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "website_slides",
+        "mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_sms",
+      "name": "SMS Marketing",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "portal",
+        "mass_mailing",
+        "sms"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mass_mailing_themes",
+      "name": "Mass Mailing Themes",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "microsoft_account",
+      "name": "Microsoft Users",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base_setup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "microsoft_calendar",
+      "name": "Outlook Calendar",
+      "category": "Productivity",
+      "depends": [
+        "microsoft_account",
+        "calendar"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "microsoft_outlook",
+      "name": "Microsoft Outlook",
+      "category": "Hidden",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp",
+      "name": "Manufacturing",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "product",
+        "stock",
+        "resource"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_account",
+      "name": "Accounting - MRP",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "mrp",
+        "stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_landed_costs",
+      "name": "Landed Costs On MO",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "stock_landed_costs",
+        "mrp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_product_expiry",
+      "name": "Manufacturing Expiry",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "mrp",
+        "product_expiry"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_repair",
+      "name": "Mrp Repairs",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "repair",
+        "mrp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_subcontracting",
+      "name": "MRP Subcontracting",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "mrp"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_subcontracting_account",
+      "name": "Subcontracting Management with Stock Valuation",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "mrp_subcontracting",
+        "mrp_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_subcontracting_dropshipping",
+      "name": "Dropship and Subcontracting Management",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "mrp_subcontracting",
+        "stock_dropshipping"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_subcontracting_landed_costs",
+      "name": "Landed Costs With Subcontracting order",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "stock_landed_costs",
+        "mrp_subcontracting"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_subcontracting_purchase",
+      "name": "Purchase and Subcontracting Management",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "mrp_subcontracting",
+        "purchase_mrp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "mrp_subcontracting_repair",
+      "name": "MRP Subcontracting Repair",
+      "category": "Supply Chain/Repair",
+      "depends": [
+        "mrp_subcontracting",
+        "repair"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "onboarding",
+      "name": "Onboarding Toolbox",
+      "category": "Hidden",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "partner_autocomplete",
+      "name": "Partner Autocomplete",
+      "category": "Hidden/Tools",
+      "depends": [
+        "iap_mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "partnership",
+      "name": "Partnership / Membership",
+      "category": "Sales/CRM",
+      "depends": [
+        "crm",
+        "sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment",
+      "name": "Payment Engine",
+      "category": "Hidden",
+      "depends": [
+        "onboarding",
+        "portal"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_adyen",
+      "name": "Payment Provider: Adyen",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_aps",
+      "name": "Payment Provider: Amazon Payment Services",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_asiapay",
+      "name": "Payment Provider: AsiaPay",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_authorize",
+      "name": "Payment Provider: Authorize.Net",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_buckaroo",
+      "name": "Payment Provider: Buckaroo",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_custom",
+      "name": "Payment Provider: Custom Payment Modes",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_demo",
+      "name": "Payment Provider: Demo",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_dpo",
+      "name": "Payment Provider: DPO",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_ecpay",
+      "name": "Payment Provider: ECPay",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_flutterwave",
+      "name": "Payment Provider: Flutterwave",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_iyzico",
+      "name": "Payment Provider: Iyzico",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_mercado_pago",
+      "name": "Payment Provider: Mercado Pago",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_mollie",
+      "name": "Payment Provider: Mollie",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_nuvei",
+      "name": "Payment Provider: Nuvei",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_paymob",
+      "name": "Payment Provider: Paymob",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_paypal",
+      "name": "Payment Provider: Paypal",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_razorpay",
+      "name": "Payment Provider: Razorpay",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_redsys",
+      "name": "Payment Provider: Redsys",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_stripe",
+      "name": "Payment Provider: Stripe",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_toss_payments",
+      "name": "Payment Provider: Toss Payments",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_worldline",
+      "name": "Payment Provider: Worldline",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "payment_xendit",
+      "name": "Payment Provider: Xendit",
+      "category": "Accounting/Payment Providers",
+      "depends": [
+        "payment"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "phone_validation",
+      "name": "Phone Numbers Validation",
+      "category": "Hidden",
+      "depends": [
+        "base",
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "point_of_sale",
+      "name": "Point of Sale",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "resource",
+        "stock_account",
+        "barcodes",
+        "html_editor",
+        "digest",
+        "phone_validation",
+        "partner_autocomplete",
+        "iot_base",
+        "google_address_autocomplete"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "portal",
+      "name": "Customer Portal",
+      "category": "Hidden",
+      "depends": [
+        "web",
+        "html_editor",
+        "http_routing",
+        "mail",
+        "auth_signup"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "portal_rating",
+      "name": "Portal Rating",
+      "category": "Services",
+      "depends": [
+        "portal",
+        "rating"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_account_tax_python",
+      "name": "Allow custom taxes in POS",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account_tax_python",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_adyen",
+      "name": "POS Adyen",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_cashdro",
+      "name": "POS Cashdro Cash Machines",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_discount",
+      "name": "Point of Sale Discounts",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_dpopay",
+      "name": "PoS DPO Pay",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_edi_ubl",
+      "name": "Point of Sale UBL",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_event",
+      "name": "POS - Event",
+      "category": "Technical",
+      "depends": [
+        "point_of_sale",
+        "event_product"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_event_sale",
+      "name": "PoS - Event Sale",
+      "category": "Technical",
+      "depends": [
+        "pos_event",
+        "pos_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_glory_cash",
+      "name": "POS Glory Cash Machines",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_hr",
+      "name": "POS - HR",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "hr"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_hr_restaurant",
+      "name": "POS HR Restaurant",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_hr",
+        "pos_restaurant"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_imin",
+      "name": "POS iMin",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_loyalty",
+      "name": "Point of Sale - Coupons & Loyalty",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "loyalty",
+        "point_of_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_mercado_pago",
+      "name": "POS Mercado Pago",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_mollie",
+      "name": "POS Mollie",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "payment_mollie"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_mrp",
+      "name": "pos_mrp",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "mrp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_online_payment",
+      "name": "Point of Sale online payment",
+      "category": "",
+      "depends": [
+        "point_of_sale",
+        "account_payment"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_online_payment_self_order",
+      "name": "POS Self-Order / Online Payment",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_online_payment",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_pine_labs",
+      "name": "POS Pine Labs",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_qfpay",
+      "name": "POS QFPay",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_razorpay",
+      "name": "POS Razorpay",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_repair",
+      "name": "POS - Repair",
+      "category": "Technical",
+      "depends": [
+        "point_of_sale",
+        "repair"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_restaurant",
+      "name": "Restaurant",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_restaurant_adyen",
+      "name": "POS Restaurant Adyen",
+      "category": "Point of Sale",
+      "depends": [
+        "pos_adyen",
+        "pos_restaurant",
+        "payment_adyen"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_restaurant_loyalty",
+      "name": "POS - Restaurant Loyality",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_restaurant",
+        "pos_loyalty"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_restaurant_stripe",
+      "name": "POS Restaurant Stripe",
+      "category": "Point of Sale",
+      "depends": [
+        "pos_stripe",
+        "pos_restaurant",
+        "payment_stripe"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_safaricom",
+      "name": "POS Safaricom",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_sale",
+      "name": "POS - Sales",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "sale_management"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_sale_loyalty",
+      "name": "POS - Sales Loyality",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_sale",
+        "pos_loyalty"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_sale_margin",
+      "name": "POS - Sale Margin",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "pos_sale",
+        "sale_margin"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order",
+      "name": "POS Self Order",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_restaurant",
+        "http_routing",
+        "link_tracker"
+      ],
+      "auto_install": [
+        "pos_restaurant"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_adyen",
+      "name": "POS Self Order Adyen",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_adyen",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_pine_labs",
+      "name": "POS Self Order Pine Labs",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_pine_labs",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_qfpay",
+      "name": "POS Self Order QFPay",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_qfpay",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_razorpay",
+      "name": "POS Self Order Razorpay",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_razorpay",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_sale",
+      "name": "POS Self Order Sale",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_sale",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_stripe",
+      "name": "POS Self Order Stripe",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_stripe",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_self_order_viva_com",
+      "name": "POS Self Order Viva.com",
+      "category": "Sales/Point Of Sale",
+      "depends": [
+        "pos_viva_com",
+        "pos_self_order"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_sms",
+      "name": "POS - SMS",
+      "category": "Send sms to customer for order confirmation",
+      "depends": [
+        "point_of_sale",
+        "sms"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_stripe",
+      "name": "POS Stripe",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale",
+        "payment_stripe"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "pos_viva_com",
+      "name": "PoS Viva.com",
+      "category": "Sales/Point of Sale",
+      "depends": [
+        "point_of_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "privacy_lookup",
+      "name": "Privacy",
+      "category": "Hidden",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "product",
+      "name": "Products & Pricelists",
+      "category": "Sales/Sales",
+      "depends": [
+        "base",
+        "mail",
+        "uom"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "product_email_template",
+      "name": "Product Email Template",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "product_expiry",
+      "name": "Products Expiration Date",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "product_margin",
+      "name": "Margins by Products",
+      "category": "Sales/Sales",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "product_matrix",
+      "name": "Product Matrix",
+      "category": "Sales/Sales",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project",
+      "name": "Project",
+      "category": "Services/Project",
+      "depends": [
+        "analytic",
+        "base_setup",
+        "mail",
+        "portal",
+        "rating",
+        "resource",
+        "web",
+        "web_tour",
+        "digest"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_account",
+      "name": "Project - Account",
+      "category": "Accounting/Accounting",
+      "depends": [
+        "account",
+        "project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_hr_expense",
+      "name": "Project Expenses",
+      "category": "Services/expenses",
+      "depends": [
+        "project_account",
+        "hr_expense"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_hr_skills",
+      "name": "Project - Skills",
+      "category": "Services/Project",
+      "depends": [
+        "project",
+        "hr_skills"
+      ],
+      "auto_install": true,
+      "license": "OEEL-1"
+    },
+    {
+      "module": "project_mail_plugin",
+      "name": "Project Mail Plugin",
+      "category": "Services/Project",
+      "depends": [
+        "project",
+        "mail_plugin"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_mrp",
+      "name": "MRP Project",
+      "category": "Services/Project",
+      "depends": [
+        "mrp",
+        "project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_mrp_account",
+      "name": "MRP Account Project",
+      "category": "Services/Project",
+      "depends": [
+        "mrp_account",
+        "project_mrp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_mrp_sale",
+      "name": "MRP Project Sale",
+      "category": "Services/Project",
+      "depends": [
+        "project_mrp",
+        "sale_mrp",
+        "sale_project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_mrp_stock_landed_costs",
+      "name": "Project MRP Landed Costs",
+      "category": "Supply Chain/Manufacturing",
+      "depends": [
+        "project_mrp_account",
+        "mrp_landed_costs"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_purchase",
+      "name": "Project Purchase",
+      "category": "Services/Project",
+      "depends": [
+        "purchase",
+        "project_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_purchase_stock",
+      "name": "Project - Purchase - Stock",
+      "category": "Services/Project",
+      "depends": [
+        "project_purchase",
+        "project_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_sale_expense",
+      "name": "Project - Sale - Expense",
+      "category": "Services/Project",
+      "depends": [
+        "sale_project",
+        "sale_expense",
+        "project_hr_expense"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_sms",
+      "name": "Project - SMS",
+      "category": "Services/Project",
+      "depends": [
+        "project",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_stock",
+      "name": "Project Stock",
+      "category": "Services/Project",
+      "depends": [
+        "stock",
+        "project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_stock_account",
+      "name": "Project Stock Account",
+      "category": "Services/Project",
+      "depends": [
+        "stock_account",
+        "project_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_stock_landed_costs",
+      "name": "Project Stock Landed Costs",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "project_stock_account",
+        "stock_landed_costs"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_timesheet_holidays",
+      "name": "Timesheet when on Time Off",
+      "category": "Human Resources",
+      "depends": [
+        "hr_timesheet",
+        "hr_holidays"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "project_todo",
+      "name": "To-Do",
+      "category": "Productivity/To-Do",
+      "depends": [
+        "project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase",
+      "name": "Purchase",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "account"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_edi_ubl_bis3",
+      "name": "Import/Export electronic orders with UBL",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "purchase",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_mrp",
+      "name": "Purchase and MRP Management",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "mrp",
+        "purchase_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_product_matrix",
+      "name": "Purchase Matrix",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "purchase",
+        "product_matrix"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_repair",
+      "name": "Purchase Repair",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "repair",
+        "purchase_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_requisition",
+      "name": "Purchase Agreements",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "purchase"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_requisition_sale",
+      "name": "Purchase Requisition Sale",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "purchase_requisition",
+        "sale_purchase"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_requisition_stock",
+      "name": "Purchase Requisition Stock",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "purchase_requisition",
+        "purchase_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "purchase_stock",
+      "name": "Purchase Stock",
+      "category": "Supply Chain/Purchase",
+      "depends": [
+        "stock_account",
+        "purchase"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "rating",
+      "name": "Customer Rating",
+      "category": "Productivity",
+      "depends": [
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "repair",
+      "name": "Repairs",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "sale_stock",
+        "sale_management"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "resource",
+      "name": "Resource",
+      "category": "Hidden",
+      "depends": [
+        "base",
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "resource_mail",
+      "name": "Resource Mail",
+      "category": "Hidden",
+      "depends": [
+        "resource",
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "rpc",
+      "name": "RPC endpoints",
+      "category": "Extra Tools",
+      "depends": [
+        "base"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale",
+      "name": "Sales",
+      "category": "Sales/Sales",
+      "depends": [
+        "sales_team",
+        "account_payment",
+        "utm"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_crm",
+      "name": "Opportunity to Quotation",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "crm"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_edi_ubl",
+      "name": "Import electronic orders with UBL",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "account_edi_ubl_cii"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_expense",
+      "name": "Sales Expense",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_management",
+        "hr_expense"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_expense_margin",
+      "name": "Sales Expense Margin",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_expense",
+        "sale_margin"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_gelato",
+      "name": "Gelato",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "delivery"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_gelato_stock",
+      "name": "Gelato/Stock bridge",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_gelato",
+        "sale_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_loyalty",
+      "name": "Sale Loyalty",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "loyalty"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_loyalty_delivery",
+      "name": "Sale Loyalty - Delivery",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_loyalty",
+        "delivery"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_management",
+      "name": "Sales",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "digest"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_margin",
+      "name": "Margins in Sales Orders",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_management"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_mrp",
+      "name": "Sales and MRP Management",
+      "category": "Sales/Sales",
+      "depends": [
+        "mrp",
+        "sale_stock"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_mrp_margin",
+      "name": "Sale Mrp Margin",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_mrp",
+        "sale_stock_margin"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_pdf_quote_builder",
+      "name": "Sales PDF Quotation Builder",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_management"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_product_matrix",
+      "name": "Sale Matrix",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "product_matrix"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_project",
+      "name": "Sales - Project",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_management",
+        "sale_service",
+        "project_account"
+      ],
+      "auto_install": [
+        "sale_management",
+        "project_account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_project_stock",
+      "name": "Sale Project - Sale Stock",
+      "category": "Sales",
+      "depends": [
+        "sale_project",
+        "sale_stock",
+        "project_stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_project_stock_account",
+      "name": "Sale Project Stock Account",
+      "category": "Services/Project",
+      "depends": [
+        "sale_project",
+        "project_stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_purchase",
+      "name": "Sale Purchase",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "purchase"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_purchase_project",
+      "name": "Sale Purchase Project",
+      "category": "Sales",
+      "depends": [
+        "sale_purchase",
+        "project_purchase",
+        "sale_project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_purchase_stock",
+      "name": "MTO Sale <-> Purchase",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_stock",
+        "purchase_stock",
+        "sale_purchase"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_service",
+      "name": "Sales - Service",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_management"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_sms",
+      "name": "Sale - SMS",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_stock",
+      "name": "Sales and Warehouse Management",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale",
+        "stock_account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_stock_margin",
+      "name": "Sale Stock Margin",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_stock",
+        "sale_margin"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_stock_product_expiry",
+      "name": "Sale Stock Product Expiry",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_stock",
+        "product_expiry"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_timesheet",
+      "name": "Sales Timesheet",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_project",
+        "hr_timesheet"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sale_timesheet_margin",
+      "name": "Service Margins in Sales Orders",
+      "category": "Sales/Sales",
+      "depends": [
+        "sale_margin",
+        "sale_timesheet"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sales_team",
+      "name": "Sales Teams",
+      "category": "Sales/Sales",
+      "depends": [
+        "base",
+        "mail"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sms",
+      "name": "SMS gateway",
+      "category": "Sales/Sales",
+      "depends": [
+        "base",
+        "iap_mail",
+        "mail",
+        "phone_validation"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "sms_twilio",
+      "name": "Twilio SMS",
+      "category": "Hidden/Tools",
+      "depends": [
+        "sms"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "snailmail",
+      "name": "Snail Mail",
+      "category": "Hidden/Tools",
+      "depends": [
+        "iap_mail",
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "snailmail_account",
+      "name": "Snail Mail - Account",
+      "category": "Hidden/Tools",
+      "depends": [
+        "account",
+        "snailmail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "social_media",
+      "name": "Social Media",
+      "category": "Marketing/Social Marketing",
+      "depends": [
+        "base"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet",
+      "name": "Spreadsheet",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "bus",
+        "web",
+        "portal"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_account",
+      "name": "Spreadsheet Accounting Formulas",
+      "category": "Accounting",
+      "depends": [
+        "spreadsheet",
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard",
+      "name": "Spreadsheet dashboard",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_account",
+      "name": "Spreadsheet dashboard for accounting",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "account"
+      ],
+      "auto_install": [
+        "account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_event_sale",
+      "name": "Spreadsheet dashboard for events",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "event_sale"
+      ],
+      "auto_install": [
+        "event_sale"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_hr_expense",
+      "name": "Spreadsheet dashboard for expenses",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "sale_expense"
+      ],
+      "auto_install": [
+        "sale_expense"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_hr_timesheet",
+      "name": "Spreadsheet dashboard for time sheets",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "hr_timesheet"
+      ],
+      "auto_install": [
+        "hr_timesheet"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_im_livechat",
+      "name": "Spreadsheet dashboard for live chat",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "im_livechat"
+      ],
+      "auto_install": [
+        "im_livechat"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_pos_hr",
+      "name": "Spreadsheet dashboard for point of sale",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "pos_hr"
+      ],
+      "auto_install": [
+        "pos_hr"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_pos_restaurant",
+      "name": "Spreadsheet dashboard for restaurants",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "pos_hr",
+        "pos_restaurant"
+      ],
+      "auto_install": [
+        "pos_hr",
+        "pos_restaurant"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_sale",
+      "name": "Spreadsheet dashboard for sales",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "sale"
+      ],
+      "auto_install": [
+        "sale"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_sale_timesheet",
+      "name": "Spreadsheet dashboard for time sheets",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "sale_timesheet"
+      ],
+      "auto_install": [
+        "sale_timesheet"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_stock_account",
+      "name": "Spreadsheet dashboard for stock",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "stock_account"
+      ],
+      "auto_install": [
+        "stock_account"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_website_sale",
+      "name": "Spreadsheet dashboard for eCommerce",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "website_sale"
+      ],
+      "auto_install": [
+        "website_sale"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "spreadsheet_dashboard_website_sale_slides",
+      "name": "Spreadsheet dashboard for eLearning",
+      "category": "Productivity/Dashboard",
+      "depends": [
+        "spreadsheet_dashboard",
+        "website_sale_slides"
+      ],
+      "auto_install": [
+        "website_sale_slides"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock",
+      "name": "Inventory",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "product",
+        "barcodes_gs1_nomenclature",
+        "digest"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_account",
+      "name": "WMS Accounting",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock",
+        "account"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_delivery",
+      "name": "Delivery - Stock",
+      "category": "Shipping Connectors",
+      "depends": [
+        "sale_stock",
+        "delivery"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_dropshipping",
+      "name": "Drop Shipping",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "sale_purchase_stock"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_fleet",
+      "name": "Stock Transport",
+      "category": "",
+      "depends": [
+        "stock_picking_batch",
+        "fleet"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_landed_costs",
+      "name": "WMS Landed Costs",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock_account",
+        "purchase_stock"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_maintenance",
+      "name": "Stock - Maintenance",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock",
+        "maintenance"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_picking_batch",
+      "name": "Warehouse Management: Batch Transfer",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "stock_sms",
+      "name": "Stock - SMS",
+      "category": "Supply Chain/Inventory",
+      "depends": [
+        "stock",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "survey",
+      "name": "Surveys",
+      "category": "Marketing/Surveys",
+      "depends": [
+        "auth_signup",
+        "http_routing",
+        "mail",
+        "web_tour",
+        "gamification"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "survey_crm",
+      "name": "Survey CRM",
+      "category": "Marketing/Surveys",
+      "depends": [
+        "survey",
+        "crm"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_base_automation",
+      "name": "Test - Base Automation",
+      "category": "Hidden",
+      "depends": [
+        "base_automation"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_crm_full",
+      "name": "Test Full Crm Flow",
+      "category": "Hidden/Tests",
+      "depends": [
+        "crm",
+        "crm_iap_enrich",
+        "crm_iap_mine",
+        "crm_sms",
+        "event_crm",
+        "sale_crm",
+        "website_crm",
+        "website_crm_iap_reveal",
+        "website_crm_partner_assign",
+        "website_crm_livechat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_discuss_full",
+      "name": "Test Discuss (full)",
+      "category": "Productivity/Discuss",
+      "depends": [
+        "calendar",
+        "crm",
+        "crm_livechat",
+        "hr_attendance",
+        "hr_fleet",
+        "hr_holidays",
+        "hr_homeworking",
+        "im_livechat",
+        "mail",
+        "mail_bot",
+        "project_todo",
+        "website_livechat",
+        "website_sale",
+        "website_slides"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_event_full",
+      "name": "Test Full Event Flow",
+      "category": "Hidden/Tests",
+      "depends": [
+        "event",
+        "event_booth",
+        "event_crm",
+        "event_crm_sale",
+        "event_sale",
+        "event_sms",
+        "payment_demo",
+        "website_event_booth_sale_exhibitor",
+        "website_event_exhibitor",
+        "website_event_sale",
+        "website_event_track",
+        "website_event_track_live",
+        "website_event_track_quiz"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_html_field_history",
+      "name": "Test - html_field_history",
+      "category": "Hidden",
+      "depends": [
+        "html_editor"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_import_export",
+      "name": "Test - Import & Export",
+      "category": "Hidden",
+      "depends": [
+        "web",
+        "base_import",
+        "website"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_mail",
+      "name": "Mail Tests",
+      "category": "Hidden",
+      "depends": [
+        "mail",
+        "test_orm"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_mail_full",
+      "name": "Mail Tests (Full)",
+      "category": "Hidden",
+      "depends": [
+        "mail",
+        "mail_bot",
+        "portal",
+        "rating",
+        "mass_mailing",
+        "mass_mailing_sms",
+        "phone_validation",
+        "sms",
+        "test_mail",
+        "test_mail_sms",
+        "test_mass_mailing"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_mail_sms",
+      "name": "SMS Tests",
+      "category": "Hidden",
+      "depends": [
+        "mail",
+        "sms",
+        "sms_twilio",
+        "test_orm"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_mass_mailing",
+      "name": "Mass Mail Tests",
+      "category": "Marketing/Email Marketing",
+      "depends": [
+        "mass_mailing",
+        "mass_mailing_sms",
+        "sms_twilio",
+        "test_mail",
+        "test_mail_sms"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_resource",
+      "name": "Test - Resource",
+      "category": "Hidden",
+      "depends": [
+        "resource"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_sale_product_configurators",
+      "name": "Sale Product Configurators Tests",
+      "category": "Hidden",
+      "depends": [
+        "event_sale",
+        "sale_management",
+        "sale_product_matrix"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_sale_purchase_edi_ubl",
+      "name": "Test - Sale & Purchase Order EDI",
+      "category": "Hidden",
+      "depends": [
+        "purchase_edi_ubl_bis3",
+        "sale_edi_ubl"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_spreadsheet",
+      "name": "Spreadsheet Test",
+      "category": "Hidden",
+      "depends": [
+        "spreadsheet"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_website",
+      "name": "Website Test",
+      "category": "Hidden",
+      "depends": [
+        "web_unsplash",
+        "website",
+        "theme_default"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_website_modules",
+      "name": "Website Modules Test",
+      "category": "Hidden",
+      "depends": [
+        "theme_default",
+        "website",
+        "website_blog",
+        "website_event_sale",
+        "website_slides",
+        "website_livechat",
+        "website_crm_iap_reveal",
+        "website_sale_comparison",
+        "website_sale_wishlist"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "test_website_slides_full",
+      "name": "Test Full eLearning Flow",
+      "category": "Hidden/Tests",
+      "depends": [
+        "website_sale_slides",
+        "website_slides_forum",
+        "website_slides_survey"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "theme_default",
+      "name": "Default Theme",
+      "category": "Theme",
+      "depends": [
+        "website"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "transifex",
+      "name": "Transifex integration",
+      "category": "Hidden/Tools",
+      "depends": [
+        "base",
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "uom",
+      "name": "Units of measure",
+      "category": "Sales/Sales",
+      "depends": [
+        "base"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "utm",
+      "name": "UTM Trackers",
+      "category": "Marketing",
+      "depends": [
+        "base",
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "web",
+      "name": "Web",
+      "category": "Hidden",
+      "depends": [
+        "base"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "web_hierarchy",
+      "name": "Web Hierarchy",
+      "category": "Hidden",
+      "depends": [
+        "web"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "web_tour",
+      "name": "Tours",
+      "category": "Hidden",
+      "depends": [
+        "web"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "web_unsplash",
+      "name": "Unsplash Image Library",
+      "category": "Hidden",
+      "depends": [
+        "base_setup",
+        "html_editor"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website",
+      "name": "Website",
+      "category": "Website/Website",
+      "depends": [
+        "digest",
+        "web",
+        "html_editor",
+        "http_routing",
+        "portal",
+        "social_media",
+        "auth_signup",
+        "mail",
+        "google_recaptcha",
+        "utm",
+        "html_builder"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_blog",
+      "name": "Blog",
+      "category": "Website/Website",
+      "depends": [
+        "website_mail",
+        "website_partner",
+        "html_builder"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_cf_turnstile",
+      "name": "Cloudflare Turnstile",
+      "category": "Website/Website",
+      "depends": [
+        "website"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_crm",
+      "name": "Contact Form",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "crm"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_crm_iap_reveal",
+      "name": "Lead Generation From Website Visits",
+      "category": "Sales/CRM",
+      "depends": [
+        "iap_crm",
+        "iap_mail",
+        "crm_iap_mine",
+        "website_crm"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_crm_livechat",
+      "name": "Lead Livechat Sessions",
+      "category": "Website/Website",
+      "depends": [
+        "website_crm",
+        "website_livechat"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_crm_partner_assign",
+      "name": "Resellers",
+      "category": "Website/Website",
+      "depends": [
+        "base_geolocalize",
+        "crm",
+        "account",
+        "partnership",
+        "website_partner",
+        "website_google_map",
+        "portal"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_crm_sms",
+      "name": "Send SMS to Visitor with leads",
+      "category": "Website/Website",
+      "depends": [
+        "website_sms",
+        "crm"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_customer",
+      "name": "Customer References",
+      "category": "Website/Website",
+      "depends": [
+        "website_crm_partner_assign",
+        "website_partner",
+        "website_google_map"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event",
+      "name": "Events",
+      "category": "Marketing/Events",
+      "depends": [
+        "event",
+        "website",
+        "website_partner",
+        "website_mail",
+        "html_builder"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_booth",
+      "name": "Online Event Booths",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_event",
+        "event_booth"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_booth_exhibitor",
+      "name": "Booths/Exhibitors Bridge",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_event_exhibitor",
+        "website_event_booth"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_booth_sale",
+      "name": "Online Event Booth Sale",
+      "category": "Marketing/Events",
+      "depends": [
+        "event_booth_sale",
+        "website_event_booth",
+        "website_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_booth_sale_exhibitor",
+      "name": "Booths Sale/Exhibitors Bridge",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_event_exhibitor",
+        "website_event_booth_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_crm",
+      "name": "Website Events CRM",
+      "category": "Website/Website",
+      "depends": [
+        "event_crm",
+        "website_event"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_exhibitor",
+      "name": "Event Exhibitors",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_event"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_sale",
+      "name": "Online Event Ticketing",
+      "category": "Website/Website",
+      "depends": [
+        "website_event",
+        "event_sale",
+        "website_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_track",
+      "name": "Advanced Events",
+      "category": "Marketing",
+      "depends": [
+        "website_event"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_track_live",
+      "name": "Live Event Tracks",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_event_track"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_track_live_quiz",
+      "name": "Quiz on Live Event Tracks",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_event_track_live",
+        "website_event_track_quiz"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_event_track_quiz",
+      "name": "Quizzes on Tracks",
+      "category": "Marketing/Events",
+      "depends": [
+        "website_profile",
+        "website_event_track"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_forum",
+      "name": "Forum",
+      "category": "Website/Website",
+      "depends": [
+        "auth_signup",
+        "website_mail",
+        "website_profile"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_google_map",
+      "name": "Google Maps",
+      "category": "Website/Website",
+      "depends": [
+        "base_geolocalize",
+        "website_partner"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_hr_recruitment",
+      "name": "Online Jobs",
+      "category": "Website/Website",
+      "depends": [
+        "hr_recruitment",
+        "website_mail"
+      ],
+      "auto_install": [
+        "hr_recruitment",
+        "website_mail"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_hr_recruitment_livechat",
+      "name": "Website IM Livechat HR Recruitment",
+      "category": "Website/Live Chat",
+      "depends": [
+        "website_hr_recruitment",
+        "im_livechat"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_links",
+      "name": "Link Tracker",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "link_tracker"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_livechat",
+      "name": "Website Live Chat",
+      "category": "Website/Live Chat",
+      "depends": [
+        "website",
+        "im_livechat"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_mail",
+      "name": "Website Mail",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "mail"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_mail_group",
+      "name": "Website Mail Group",
+      "category": "",
+      "depends": [
+        "mail_group",
+        "website"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_mass_mailing",
+      "name": "Newsletter Subscribe Button",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "mass_mailing",
+        "google_recaptcha"
+      ],
+      "auto_install": [
+        "website",
+        "mass_mailing"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_mass_mailing_sms",
+      "name": "Newsletter Subscribe SMS Template",
+      "category": "Website/Website",
+      "depends": [
+        "website_mass_mailing",
+        "mass_mailing_sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_partner",
+      "name": "Website Partner",
+      "category": "Website/Website",
+      "depends": [
+        "website"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_payment",
+      "name": "Website Payment",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "account_payment",
+        "portal"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_profile",
+      "name": "Website profile",
+      "category": "Website/Website",
+      "depends": [
+        "html_editor",
+        "website_partner",
+        "gamification"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_project",
+      "name": "Online Task Submission",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "project"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale",
+      "name": "eCommerce",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "sale",
+        "website_payment",
+        "website_mail",
+        "portal_rating",
+        "digest",
+        "delivery",
+        "html_builder"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_autocomplete",
+      "name": "Google places autocompletion",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale",
+        "google_address_autocomplete"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_collect",
+      "name": "Click & Collect",
+      "category": "Website/Website",
+      "depends": [
+        "base_geolocalize",
+        "payment_custom",
+        "website_sale_stock"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_collect_wishlist",
+      "name": "Collect & Wishlist",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale_wishlist",
+        "website_sale_collect"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_comparison",
+      "name": "Product Comparison",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_comparison_wishlist",
+      "name": "Product Availability Notifications",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale_comparison",
+        "website_sale_wishlist"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_gelato",
+      "name": "eCommerce/Gelato bridge",
+      "category": "Website/Website",
+      "depends": [
+        "sale_gelato",
+        "website_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_loyalty",
+      "name": "Coupons, Promotions, Gift Card and Loyalty for eCommerce",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale",
+        "website_links",
+        "sale_loyalty"
+      ],
+      "auto_install": [
+        "website_sale",
+        "sale_loyalty"
+      ],
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_mass_mailing",
+      "name": "Checkout Newsletter",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale",
+        "website_mass_mailing"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_mondialrelay",
+      "name": "eCommerce Mondialrelay Delivery",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale",
+        "delivery_mondialrelay"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_mrp",
+      "name": "Kit Availability",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale_stock",
+        "sale_mrp"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_slides",
+      "name": "Sell Courses",
+      "category": "Website/eLearning",
+      "depends": [
+        "website_slides",
+        "website_sale"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_stock",
+      "name": "Product Availability",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale",
+        "sale_stock",
+        "stock_delivery"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_stock_wishlist",
+      "name": "Product Availability Notifications",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale_stock",
+        "website_sale_wishlist"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sale_wishlist",
+      "name": "Shopper's Wishlist",
+      "category": "Website/Website",
+      "depends": [
+        "website_sale"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_slides",
+      "name": "eLearning",
+      "category": "Website/eLearning",
+      "depends": [
+        "portal_rating",
+        "website",
+        "website_mail",
+        "website_profile"
+      ],
+      "auto_install": false,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_slides_forum",
+      "name": "Forum on Courses",
+      "category": "Website/eLearning",
+      "depends": [
+        "website_slides",
+        "website_forum"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_slides_survey",
+      "name": "Course Certifications",
+      "category": "Website/eLearning",
+      "depends": [
+        "website_slides",
+        "survey"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_sms",
+      "name": "Send SMS to Visitor",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "sms"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    },
+    {
+      "module": "website_timesheet",
+      "name": "Hide Portal Timesheet Information",
+      "category": "Website/Website",
+      "depends": [
+        "website",
+        "hr_timesheet"
+      ],
+      "auto_install": true,
+      "license": "LGPL-3"
+    }
+  ]
+}

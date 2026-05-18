@@ -1,0 +1,85 @@
+{
+  "source_commit": "e5144dd38cb9161d8ebbf6a7d06f1698a20a4901",
+  "routes": [
+    {
+      "file": "addons/sale/controllers/portal.py",
+      "function": "portal_quote_document",
+      "route": "'/my/orders/<int:order_id>/document/<int:document_id>', type='http', auth='public', readonly=True"
+    },
+    {
+      "file": "addons/web/controllers/json.py",
+      "function": "web_json",
+      "route": "'/json/<path:subpath>', auth='user', type='http', readonly=True"
+    },
+    {
+      "file": "addons/web/controllers/json.py",
+      "function": "web_json_1",
+      "route": "'/json/1/<path:subpath>', auth='bearer', type='http', readonly=True"
+    },
+    {
+      "file": "addons/product/controllers/product_document.py",
+      "function": "upload_document",
+      "route": "'/product/document/upload', type='http', methods=['POST'], auth='user'"
+    },
+    {
+      "file": "addons/rpc/controllers/json2.py",
+      "function": "web_json_2_404",
+      "route": "['/json/2', '/json/2/<path:subpath>'], auth='public', type='json2', readonly=True, methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],"
+    },
+    {
+      "file": "addons/rpc/controllers/json2.py",
+      "function": "web_json_2_rpc",
+      "route": "'/json/2/<__model__>/<__method__>', methods=['POST'], auth='bearer', type='json2', readonly=_web_json_2_rpc_readonly, save_session=False,"
+    },
+    {
+      "file": "addons/rpc/controllers/xmlrpc.py",
+      "function": "xmlrpc_1",
+      "route": "\"/xmlrpc/<service>\", auth=\"none\", methods=[\"POST\"], csrf=False, save_session=False"
+    },
+    {
+      "file": "addons/rpc/controllers/xmlrpc.py",
+      "function": "xmlrpc_2",
+      "route": "\"/xmlrpc/2/<service>\", auth=\"none\", methods=[\"POST\"], csrf=False, save_session=False"
+    },
+    {
+      "file": "addons/rpc/controllers/__init__.py",
+      "function": "version",
+      "route": "['/web/version', '/json/version'], type='http', auth='none', readonly=True"
+    },
+    {
+      "file": "addons/rpc/controllers/jsonrpc.py",
+      "function": "jsonrpc",
+      "route": "'/jsonrpc', type='jsonrpc', auth=\"none\", save_session=False"
+    },
+    {
+      "file": "addons/website_sale/controllers/main.py",
+      "function": "product_document",
+      "route": "'/shop/<model(\"product.template\"):product_template>/document/<int:document_id>', type='http', auth='public', website=True, sitemap=False, readonly=True,"
+    },
+    {
+      "file": "addons/api_doc/controllers/api_doc.py",
+      "function": "doc_client",
+      "route": "['/doc', '/doc/<model_name>', '/doc/index.html'], type='http', auth='user'"
+    },
+    {
+      "file": "addons/api_doc/controllers/api_doc.py",
+      "function": "doc_bearer_index",
+      "route": "'/doc-bearer/index.json', type='json2', auth='bearer'"
+    },
+    {
+      "file": "addons/api_doc/controllers/api_doc.py",
+      "function": "doc_index",
+      "route": "'/doc/index.json', type='json2', auth='user'"
+    },
+    {
+      "file": "addons/api_doc/controllers/api_doc.py",
+      "function": "doc_bearer_modec",
+      "route": "'/doc-bearer/<model_name>.json', type='json2', auth='bearer', readonly=True"
+    },
+    {
+      "file": "addons/api_doc/controllers/api_doc.py",
+      "function": "doc_model",
+      "route": "'/doc/<model_name>.json', type='json2', auth='user', readonly=True"
+    }
+  ]
+}

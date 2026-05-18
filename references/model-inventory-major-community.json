@@ -1,0 +1,3381 @@
+{
+  "source_commit": "e5144dd38cb9161d8ebbf6a7d06f1698a20a4901",
+  "models": [
+    {
+      "module": "account",
+      "model": "account.account",
+      "class": "AccountAccount",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/account/models/account_account.py"
+    },
+    {
+      "module": "account",
+      "model": "account.account.tag",
+      "class": "AccountAccountTag",
+      "inherits": null,
+      "file": "addons/account/models/account_account_tag.py"
+    },
+    {
+      "module": "account",
+      "model": "account.bank.statement",
+      "class": "AccountBankStatement",
+      "inherits": null,
+      "file": "addons/account/models/account_bank_statement.py"
+    },
+    {
+      "module": "account",
+      "model": "account.bank.statement.line",
+      "class": "AccountBankStatementLine",
+      "inherits": null,
+      "file": "addons/account/models/account_bank_statement_line.py"
+    },
+    {
+      "module": "account",
+      "model": "account.cash.rounding",
+      "class": "AccountCashRounding",
+      "inherits": null,
+      "file": "addons/account/models/account_cash_rounding.py"
+    },
+    {
+      "module": "account",
+      "model": "account.chart.template",
+      "class": "AccountChartTemplate",
+      "inherits": null,
+      "file": "addons/account/models/chart_template.py"
+    },
+    {
+      "module": "account",
+      "model": "account.code.mapping",
+      "class": "AccountCodeMapping",
+      "inherits": null,
+      "file": "addons/account/models/account_code_mapping.py"
+    },
+    {
+      "module": "account",
+      "model": "account.document.import.mixin",
+      "class": "AccountDocumentImportMixin",
+      "inherits": null,
+      "file": "addons/account/models/account_document_import_mixin.py"
+    },
+    {
+      "module": "account",
+      "model": "account.fiscal.position",
+      "class": "AccountFiscalPosition",
+      "inherits": null,
+      "file": "addons/account/models/partner.py"
+    },
+    {
+      "module": "account",
+      "model": "account.fiscal.position.account",
+      "class": "AccountFiscalPositionAccount",
+      "inherits": null,
+      "file": "addons/account/models/partner.py"
+    },
+    {
+      "module": "account",
+      "model": "account.full.reconcile",
+      "class": "AccountFullReconcile",
+      "inherits": null,
+      "file": "addons/account/models/account_full_reconcile.py"
+    },
+    {
+      "module": "account",
+      "model": "account.group",
+      "class": "AccountGroup",
+      "inherits": null,
+      "file": "addons/account/models/account_account.py"
+    },
+    {
+      "module": "account",
+      "model": "account.incoterms",
+      "class": "AccountIncoterms",
+      "inherits": null,
+      "file": "addons/account/models/account_incoterms.py"
+    },
+    {
+      "module": "account",
+      "model": "account.journal",
+      "class": "AccountJournal",
+      "inherits": [
+        "portal.mixin",
+        "mail.alias.mixin.optional",
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/account/models/account_journal.py"
+    },
+    {
+      "module": "account",
+      "model": "account.journal.group",
+      "class": "AccountJournalGroup",
+      "inherits": null,
+      "file": "addons/account/models/account_journal.py"
+    },
+    {
+      "module": "account",
+      "model": "account.lock_exception",
+      "class": "AccountLock_Exception",
+      "inherits": null,
+      "file": "addons/account/models/account_lock_exception.py"
+    },
+    {
+      "module": "account",
+      "model": "account.move",
+      "class": "AccountMove",
+      "inherits": [
+        "portal.mixin",
+        "mail.thread.main.attachment",
+        "mail.activity.mixin",
+        "sequence.mixin",
+        "product.catalog.mixin",
+        "account.document.import.mixin"
+      ],
+      "file": "addons/account/models/account_move.py"
+    },
+    {
+      "module": "account",
+      "model": "account.move.line",
+      "class": "AccountMoveLine",
+      "inherits": [
+        "analytic.mixin"
+      ],
+      "file": "addons/account/models/account_move_line.py"
+    },
+    {
+      "module": "account",
+      "model": "account.move.send",
+      "class": "AccountMoveSend",
+      "inherits": null,
+      "file": "addons/account/models/account_move_send.py"
+    },
+    {
+      "module": "account",
+      "model": "account.partial.reconcile",
+      "class": "AccountPartialReconcile",
+      "inherits": null,
+      "file": "addons/account/models/account_partial_reconcile.py"
+    },
+    {
+      "module": "account",
+      "model": "account.payment",
+      "class": "AccountPayment",
+      "inherits": [
+        "mail.thread.main.attachment",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/account/models/account_payment.py"
+    },
+    {
+      "module": "account",
+      "model": "account.payment.method",
+      "class": "AccountPaymentMethod",
+      "inherits": null,
+      "file": "addons/account/models/account_payment_method.py"
+    },
+    {
+      "module": "account",
+      "model": "account.payment.method.line",
+      "class": "AccountPaymentMethodLine",
+      "inherits": null,
+      "file": "addons/account/models/account_payment_method.py"
+    },
+    {
+      "module": "account",
+      "model": "account.payment.term",
+      "class": "AccountPaymentTerm",
+      "inherits": null,
+      "file": "addons/account/models/account_payment_term.py"
+    },
+    {
+      "module": "account",
+      "model": "account.payment.term.line",
+      "class": "AccountPaymentTermLine",
+      "inherits": null,
+      "file": "addons/account/models/account_payment_term.py"
+    },
+    {
+      "module": "account",
+      "model": "account.reconcile.model",
+      "class": "AccountReconcileModel",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/account/models/account_reconcile_model.py"
+    },
+    {
+      "module": "account",
+      "model": "account.reconcile.model.line",
+      "class": "AccountReconcileModelLine",
+      "inherits": [
+        "analytic.mixin"
+      ],
+      "file": "addons/account/models/account_reconcile_model.py"
+    },
+    {
+      "module": "account",
+      "model": "account.report",
+      "class": "AccountReport",
+      "inherits": null,
+      "file": "addons/account/models/account_report.py"
+    },
+    {
+      "module": "account",
+      "model": "account.report.column",
+      "class": "AccountReportColumn",
+      "inherits": null,
+      "file": "addons/account/models/account_report.py"
+    },
+    {
+      "module": "account",
+      "model": "account.report.expression",
+      "class": "AccountReportExpression",
+      "inherits": null,
+      "file": "addons/account/models/account_report.py"
+    },
+    {
+      "module": "account",
+      "model": "account.report.external.value",
+      "class": "AccountReportExternalValue",
+      "inherits": null,
+      "file": "addons/account/models/account_report.py"
+    },
+    {
+      "module": "account",
+      "model": "account.report.line",
+      "class": "AccountReportLine",
+      "inherits": null,
+      "file": "addons/account/models/account_report.py"
+    },
+    {
+      "module": "account",
+      "model": "account.root",
+      "class": "AccountRoot",
+      "inherits": null,
+      "file": "addons/account/models/account_root.py"
+    },
+    {
+      "module": "account",
+      "model": "account.tax",
+      "class": "AccountTax",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/account/models/account_tax.py"
+    },
+    {
+      "module": "account",
+      "model": "account.tax.group",
+      "class": "AccountTaxGroup",
+      "inherits": null,
+      "file": "addons/account/models/account_tax.py"
+    },
+    {
+      "module": "account",
+      "model": "account.tax.repartition.line",
+      "class": "AccountTaxRepartitionLine",
+      "inherits": null,
+      "file": "addons/account/models/account_tax.py"
+    },
+    {
+      "module": "account",
+      "model": "res.company",
+      "class": "ResCompany",
+      "inherits": [
+        "res.company",
+        "mail.thread"
+      ],
+      "file": "addons/account/models/company.py"
+    },
+    {
+      "module": "account",
+      "model": "res.partner.bank",
+      "class": "ResPartnerBank",
+      "inherits": [
+        "res.partner.bank",
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/account/models/res_partner_bank.py"
+    },
+    {
+      "module": "account",
+      "model": "sequence.mixin",
+      "class": "SequenceMixin",
+      "inherits": null,
+      "file": "addons/account/models/sequence_mixin.py"
+    },
+    {
+      "module": "account_edi",
+      "model": "account.edi.document",
+      "class": "AccountEdiDocument",
+      "inherits": null,
+      "file": "addons/account_edi/models/account_edi_document.py"
+    },
+    {
+      "module": "account_edi",
+      "model": "account.edi.format",
+      "class": "AccountEdiFormat",
+      "inherits": null,
+      "file": "addons/account_edi/models/account_edi_format.py"
+    },
+    {
+      "module": "account_edi_proxy_client",
+      "model": "account_edi_proxy_client.user",
+      "class": "Account_Edi_Proxy_ClientUser",
+      "inherits": null,
+      "file": "addons/account_edi_proxy_client/models/account_edi_proxy_user.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.common",
+      "class": "AccountEdiCommon",
+      "inherits": null,
+      "file": "addons/account_edi_ubl_cii/models/account_edi_common.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.ubl",
+      "class": "AccountEdiUBL",
+      "inherits": "account.edi.common",
+      "file": "addons/account_edi_ubl_cii/models/account_edi_ubl.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.cii",
+      "class": "AccountEdiXmlCii",
+      "inherits": [
+        "account.edi.common"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_cii_facturx.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_20",
+      "class": "AccountEdiXmlUBL20",
+      "inherits": "account.edi.ubl",
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_20.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_21",
+      "class": "AccountEdiXmlUbl_21",
+      "inherits": [
+        "account.edi.xml.ubl_20"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_21.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_a_nz",
+      "class": "AccountEdiXmlUbl_A_Nz",
+      "inherits": [
+        "account.edi.xml.ubl_bis3"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_a_nz.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_bis3",
+      "class": "AccountEdiXmlUbl_Bis3",
+      "inherits": [
+        "account.edi.xml.ubl_21"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_bis3.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_de",
+      "class": "AccountEdiXmlUbl_De",
+      "inherits": [
+        "account.edi.xml.ubl_bis3"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_xrechnung.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_efff",
+      "class": "AccountEdiXmlUbl_Efff",
+      "inherits": [
+        "account.edi.xml.ubl_20"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_efff.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_nl",
+      "class": "AccountEdiXmlUbl_Nl",
+      "inherits": [
+        "account.edi.xml.ubl_bis3"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_nlcius.py"
+    },
+    {
+      "module": "account_edi_ubl_cii",
+      "model": "account.edi.xml.ubl_sg",
+      "class": "AccountEdiXmlUbl_Sg",
+      "inherits": [
+        "account.edi.xml.ubl_bis3"
+      ],
+      "file": "addons/account_edi_ubl_cii/models/account_edi_xml_ubl_sg.py"
+    },
+    {
+      "module": "account_peppol_response",
+      "model": "account.peppol.clarification",
+      "class": "PeppolClarification",
+      "inherits": null,
+      "file": "addons/account_peppol_response/models/account_peppol_clarification.py"
+    },
+    {
+      "module": "account_peppol_response",
+      "model": "account.peppol.response",
+      "class": "AccountPeppolResponse",
+      "inherits": null,
+      "file": "addons/account_peppol_response/models/account_peppol_response.py"
+    },
+    {
+      "module": "account_test",
+      "model": "accounting.assert.test",
+      "class": "AccountingAssertTest",
+      "inherits": null,
+      "file": "addons/account_test/models/accounting_assert_test.py"
+    },
+    {
+      "module": "base_address_extended",
+      "model": "res.city",
+      "class": "ResCity",
+      "inherits": null,
+      "file": "addons/base_address_extended/models/res_city.py"
+    },
+    {
+      "module": "base_automation",
+      "model": "base.automation",
+      "class": "BaseAutomation",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/base_automation/models/base_automation.py"
+    },
+    {
+      "module": "base_geolocalize",
+      "model": "base.geo_provider",
+      "class": "BaseGeo_Provider",
+      "inherits": null,
+      "file": "addons/base_geolocalize/models/base_geocoder.py"
+    },
+    {
+      "module": "base_geolocalize",
+      "model": "base.geocoder",
+      "class": "BaseGeocoder",
+      "inherits": null,
+      "file": "addons/base_geolocalize/models/base_geocoder.py"
+    },
+    {
+      "module": "base_import",
+      "model": "base_import.import",
+      "class": "Base_ImportImport",
+      "inherits": null,
+      "file": "addons/base_import/models/base_import.py"
+    },
+    {
+      "module": "base_import",
+      "model": "base_import.mapping",
+      "class": "Base_ImportMapping",
+      "inherits": null,
+      "file": "addons/base_import/models/base_import.py"
+    },
+    {
+      "module": "base_import_module",
+      "model": "base.import.module",
+      "class": "BaseImportModule",
+      "inherits": null,
+      "file": "addons/base_import_module/models/base_import_module.py"
+    },
+    {
+      "module": "base_setup",
+      "model": "kpi.provider",
+      "class": "KpiProvider",
+      "inherits": null,
+      "file": "addons/base_setup/models/kpi_provider.py"
+    },
+    {
+      "module": "base_sparse_field",
+      "model": "sparse_fields.test",
+      "class": "Sparse_FieldsTest",
+      "inherits": null,
+      "file": "addons/base_sparse_field/models/models.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.lead",
+      "class": "CrmLead",
+      "inherits": [
+        "mail.thread.cc",
+        "mail.thread.blacklist",
+        "mail.thread.phone",
+        "mail.activity.mixin",
+        "utm.mixin",
+        "format.address.mixin",
+        "mail.tracking.duration.mixin"
+      ],
+      "file": "addons/crm/models/crm_lead.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.lead.scoring.frequency",
+      "class": "CrmLeadScoringFrequency",
+      "inherits": null,
+      "file": "addons/crm/models/crm_lead_scoring_frequency.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.lead.scoring.frequency.field",
+      "class": "CrmLeadScoringFrequencyField",
+      "inherits": null,
+      "file": "addons/crm/models/crm_lead_scoring_frequency.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.lost.reason",
+      "class": "CrmLostReason",
+      "inherits": null,
+      "file": "addons/crm/models/crm_lost_reason.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.recurring.plan",
+      "class": "CrmRecurringPlan",
+      "inherits": null,
+      "file": "addons/crm/models/crm_recurring_plan.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.stage",
+      "class": "CrmStage",
+      "inherits": null,
+      "file": "addons/crm/models/crm_stage.py"
+    },
+    {
+      "module": "crm",
+      "model": "crm.team",
+      "class": "CrmTeam",
+      "inherits": [
+        "mail.alias.mixin",
+        "crm.team"
+      ],
+      "file": "addons/crm/models/crm_team.py"
+    },
+    {
+      "module": "crm_iap_mine",
+      "model": "crm.iap.lead.helpers",
+      "class": "CrmIapLeadHelpers",
+      "inherits": null,
+      "file": "addons/crm_iap_mine/models/crm_iap_lead_helpers.py"
+    },
+    {
+      "module": "crm_iap_mine",
+      "model": "crm.iap.lead.industry",
+      "class": "CrmIapLeadIndustry",
+      "inherits": null,
+      "file": "addons/crm_iap_mine/models/crm_iap_lead_industry.py"
+    },
+    {
+      "module": "crm_iap_mine",
+      "model": "crm.iap.lead.mining.request",
+      "class": "CrmIapLeadMiningRequest",
+      "inherits": null,
+      "file": "addons/crm_iap_mine/models/crm_iap_lead_mining_request.py"
+    },
+    {
+      "module": "crm_iap_mine",
+      "model": "crm.iap.lead.role",
+      "class": "CrmIapLeadRole",
+      "inherits": null,
+      "file": "addons/crm_iap_mine/models/crm_iap_lead_role.py"
+    },
+    {
+      "module": "crm_iap_mine",
+      "model": "crm.iap.lead.seniority",
+      "class": "CrmIapLeadSeniority",
+      "inherits": null,
+      "file": "addons/crm_iap_mine/models/crm_iap_lead_seniority.py"
+    },
+    {
+      "module": "delivery",
+      "model": "delivery.carrier",
+      "class": "DeliveryCarrier",
+      "inherits": null,
+      "file": "addons/delivery/models/delivery_carrier.py"
+    },
+    {
+      "module": "delivery",
+      "model": "delivery.price.rule",
+      "class": "DeliveryPriceRule",
+      "inherits": null,
+      "file": "addons/delivery/models/delivery_price_rule.py"
+    },
+    {
+      "module": "delivery",
+      "model": "delivery.zip.prefix",
+      "class": "DeliveryZipPrefix",
+      "inherits": null,
+      "file": "addons/delivery/models/delivery_zip_prefix.py"
+    },
+    {
+      "module": "delivery",
+      "model": "ir.module.module",
+      "class": "IrModuleModule",
+      "inherits": [
+        "ir.module.module"
+      ],
+      "file": "addons/delivery/models/ir_module_module.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.contract.type",
+      "class": "HrContractType",
+      "inherits": null,
+      "file": "addons/hr/models/hr_contract_type.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.department",
+      "class": "HrDepartment",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/hr/models/hr_department.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.departure.reason",
+      "class": "HrDepartureReason",
+      "inherits": null,
+      "file": "addons/hr/models/hr_departure_reason.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.employee",
+      "class": "HrEmployee",
+      "inherits": [
+        "mail.thread.main.attachment",
+        "mail.activity.mixin",
+        "resource.mixin",
+        "avatar.mixin"
+      ],
+      "file": "addons/hr/models/hr_employee.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.employee.category",
+      "class": "HrEmployeeCategory",
+      "inherits": null,
+      "file": "addons/hr/models/hr_employee_category.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.employee.public",
+      "class": "HrEmployeePublic",
+      "inherits": null,
+      "file": "addons/hr/models/hr_employee_public.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.job",
+      "class": "HrJob",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/hr/models/hr_job.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.mixin",
+      "class": "HrMixin",
+      "inherits": null,
+      "file": "addons/hr/models/hr_mixin.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.payroll.structure.type",
+      "class": "HrPayrollStructureType",
+      "inherits": null,
+      "file": "addons/hr/models/hr_payroll_structure_type.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.version",
+      "class": "HrVersion",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/hr/models/hr_version.py"
+    },
+    {
+      "module": "hr",
+      "model": "hr.work.location",
+      "class": "HrWorkLocation",
+      "inherits": null,
+      "file": "addons/hr/models/hr_work_location.py"
+    },
+    {
+      "module": "hr_attendance",
+      "model": "hr.attendance",
+      "class": "HrAttendance",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/hr_attendance/models/hr_attendance.py"
+    },
+    {
+      "module": "hr_attendance",
+      "model": "hr.attendance.overtime.line",
+      "class": "HrAttendanceOvertimeLine",
+      "inherits": null,
+      "file": "addons/hr_attendance/models/hr_attendance_overtime.py"
+    },
+    {
+      "module": "hr_attendance",
+      "model": "hr.attendance.overtime.rule",
+      "class": "HrAttendanceOvertimeRule",
+      "inherits": null,
+      "file": "addons/hr_attendance/models/hr_attendance_overtime_rule.py"
+    },
+    {
+      "module": "hr_attendance",
+      "model": "hr.attendance.overtime.ruleset",
+      "class": "HrAttendanceOvertimeRuleset",
+      "inherits": null,
+      "file": "addons/hr_attendance/models/hr_attendance_overtime_ruleset.py"
+    },
+    {
+      "module": "hr_attendance",
+      "model": "hr.version",
+      "class": "HrVersion",
+      "inherits": "hr.version",
+      "file": "addons/hr_attendance/models/hr_version.py"
+    },
+    {
+      "module": "hr_expense",
+      "model": "hr.expense",
+      "class": "HrExpense",
+      "inherits": [
+        "mail.thread.main.attachment",
+        "mail.activity.mixin",
+        "analytic.mixin"
+      ],
+      "file": "addons/hr_expense/models/hr_expense.py"
+    },
+    {
+      "module": "hr_holidays",
+      "model": "hr.leave",
+      "class": "HrLeave",
+      "inherits": [
+        "mail.thread.main.attachment",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/hr_holidays/models/hr_leave.py"
+    },
+    {
+      "module": "hr_holidays",
+      "model": "hr.leave.accrual.level",
+      "class": "HrLeaveAccrualLevel",
+      "inherits": null,
+      "file": "addons/hr_holidays/models/hr_leave_accrual_plan_level.py"
+    },
+    {
+      "module": "hr_holidays",
+      "model": "hr.leave.accrual.plan",
+      "class": "HrLeaveAccrualPlan",
+      "inherits": null,
+      "file": "addons/hr_holidays/models/hr_leave_accrual_plan.py"
+    },
+    {
+      "module": "hr_holidays",
+      "model": "hr.leave.allocation",
+      "class": "HrLeaveAllocation",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/hr_holidays/models/hr_leave_allocation.py"
+    },
+    {
+      "module": "hr_holidays",
+      "model": "hr.leave.mandatory.day",
+      "class": "HrLeaveMandatoryDay",
+      "inherits": null,
+      "file": "addons/hr_holidays/models/hr_leave_mandatory_day.py"
+    },
+    {
+      "module": "hr_holidays",
+      "model": "hr.leave.type",
+      "class": "HrLeaveType",
+      "inherits": null,
+      "file": "addons/hr_holidays/models/hr_leave_type.py"
+    },
+    {
+      "module": "hr_holidays_attendance",
+      "model": "hr.attendance.overtime.line",
+      "class": "HrAttendanceOvertimeLine",
+      "inherits": "hr.attendance.overtime.line",
+      "file": "addons/hr_holidays_attendance/models/hr_attendance_overtime.py"
+    },
+    {
+      "module": "hr_holidays_attendance",
+      "model": "hr.attendance.overtime.rule",
+      "class": "HrAttendanceOvertimeRule",
+      "inherits": "hr.attendance.overtime.rule",
+      "file": "addons/hr_holidays_attendance/models/hr_attendance_overtime_rule.py"
+    },
+    {
+      "module": "hr_homeworking",
+      "model": "hr.employee.location",
+      "class": "HrEmployeeLocation",
+      "inherits": null,
+      "file": "addons/hr_homeworking/models/hr_homeworking.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.applicant",
+      "class": "HrApplicant",
+      "inherits": [
+        "mail.thread.cc",
+        "mail.thread.main.attachment",
+        "mail.thread.blacklist",
+        "mail.thread.phone",
+        "mail.activity.mixin",
+        "utm.mixin",
+        "mail.tracking.duration.mixin"
+      ],
+      "file": "addons/hr_recruitment/models/hr_applicant.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.applicant.category",
+      "class": "HrApplicantCategory",
+      "inherits": null,
+      "file": "addons/hr_recruitment/models/hr_applicant_category.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.applicant.refuse.reason",
+      "class": "HrApplicantRefuseReason",
+      "inherits": null,
+      "file": "addons/hr_recruitment/models/hr_applicant_refuse_reason.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.job",
+      "class": "HrJob",
+      "inherits": [
+        "mail.alias.mixin",
+        "hr.job",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/hr_recruitment/models/hr_job.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.job.platform",
+      "class": "HrJobPlatform",
+      "inherits": null,
+      "file": "addons/hr_recruitment/models/hr_job_platform.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.recruitment.degree",
+      "class": "HrRecruitmentDegree",
+      "inherits": null,
+      "file": "addons/hr_recruitment/models/hr_recruitment_degree.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.recruitment.source",
+      "class": "HrRecruitmentSource",
+      "inherits": [
+        "utm.source.mixin"
+      ],
+      "file": "addons/hr_recruitment/models/hr_recruitment_source.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.recruitment.stage",
+      "class": "HrRecruitmentStage",
+      "inherits": null,
+      "file": "addons/hr_recruitment/models/hr_recruitment_stage.py"
+    },
+    {
+      "module": "hr_recruitment",
+      "model": "hr.talent.pool",
+      "class": "HrTalentPool",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/hr_recruitment/models/hr_talent_pool.py"
+    },
+    {
+      "module": "hr_recruitment_skills",
+      "model": "hr.applicant.skill",
+      "class": "HrApplicantSkill",
+      "inherits": "hr.individual.skill.mixin",
+      "file": "addons/hr_recruitment_skills/models/hr_applicant_skill.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.employee.skill",
+      "class": "HrEmployeeSkill",
+      "inherits": "hr.individual.skill.mixin",
+      "file": "addons/hr_skills/models/hr_employee_skill.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.individual.skill.mixin",
+      "class": "HrIndividualSkillMixin",
+      "inherits": null,
+      "file": "addons/hr_skills/models/hr_individual_skill_mixin.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.job.skill",
+      "class": "HrJobSkill",
+      "inherits": "hr.individual.skill.mixin",
+      "file": "addons/hr_skills/models/hr_job_skill.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.resume.line",
+      "class": "HrResumeLine",
+      "inherits": null,
+      "file": "addons/hr_skills/models/hr_resume_line.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.resume.line.type",
+      "class": "HrResumeLineType",
+      "inherits": null,
+      "file": "addons/hr_skills/models/hr_resume_line_type.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.skill",
+      "class": "HrSkill",
+      "inherits": null,
+      "file": "addons/hr_skills/models/hr_skill.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.skill.level",
+      "class": "HrSkillLevel",
+      "inherits": null,
+      "file": "addons/hr_skills/models/hr_skill_level.py"
+    },
+    {
+      "module": "hr_skills",
+      "model": "hr.skill.type",
+      "class": "HrSkillType",
+      "inherits": null,
+      "file": "addons/hr_skills/models/hr_skill_type.py"
+    },
+    {
+      "module": "hr_timesheet",
+      "model": "account.analytic.line.calendar.employee",
+      "class": "AccountAnalyticLineCalendarEmployee",
+      "inherits": null,
+      "file": "addons/hr_timesheet/models/account_analytic_line_calendar_employee.py"
+    },
+    {
+      "module": "hr_work_entry",
+      "model": "hr.user.work.entry.employee",
+      "class": "HrUserWorkEntryEmployee",
+      "inherits": null,
+      "file": "addons/hr_work_entry/models/hr_user_work_entry_employee.py"
+    },
+    {
+      "module": "hr_work_entry",
+      "model": "hr.work.entry",
+      "class": "HrWorkEntry",
+      "inherits": null,
+      "file": "addons/hr_work_entry/models/hr_work_entry.py"
+    },
+    {
+      "module": "hr_work_entry",
+      "model": "hr.work.entry.type",
+      "class": "HrWorkEntryType",
+      "inherits": null,
+      "file": "addons/hr_work_entry/models/hr_work_entry_type.py"
+    },
+    {
+      "module": "mail",
+      "model": "fetchmail.server",
+      "class": "FetchmailServer",
+      "inherits": null,
+      "file": "addons/mail/models/fetchmail.py"
+    },
+    {
+      "module": "mail",
+      "model": "ir.actions.server",
+      "class": "IrActionsServer",
+      "inherits": [
+        "ir.actions.server",
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/mail/models/ir_actions_server.py"
+    },
+    {
+      "module": "mail",
+      "model": "ir.cron",
+      "class": "IrCron",
+      "inherits": [
+        "ir.cron",
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/mail/models/ir_cron.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.activity",
+      "class": "MailActivity",
+      "inherits": null,
+      "file": "addons/mail/models/mail_activity.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.activity.mixin",
+      "class": "MailActivityMixin",
+      "inherits": null,
+      "file": "addons/mail/models/mail_activity_mixin.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.activity.plan",
+      "class": "MailActivityPlan",
+      "inherits": null,
+      "file": "addons/mail/models/mail_activity_plan.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.activity.plan.template",
+      "class": "MailActivityPlanTemplate",
+      "inherits": null,
+      "file": "addons/mail/models/mail_activity_plan_template.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.activity.type",
+      "class": "MailActivityType",
+      "inherits": null,
+      "file": "addons/mail/models/mail_activity_type.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.alias",
+      "class": "MailAlias",
+      "inherits": null,
+      "file": "addons/mail/models/mail_alias.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.alias.domain",
+      "class": "MailAliasDomain",
+      "inherits": null,
+      "file": "addons/mail/models/mail_alias_domain.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.alias.mixin",
+      "class": "MailAliasMixin",
+      "inherits": [
+        "mail.alias.mixin.optional"
+      ],
+      "file": "addons/mail/models/mail_alias_mixin.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.alias.mixin.optional",
+      "class": "MailAliasMixinOptional",
+      "inherits": null,
+      "file": "addons/mail/models/mail_alias_mixin_optional.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.blacklist",
+      "class": "MailBlacklist",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/mail/models/mail_blacklist.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.canned.response",
+      "class": "MailCannedResponse",
+      "inherits": null,
+      "file": "addons/mail/models/mail_canned_response.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.composer.mixin",
+      "class": "MailComposerMixin",
+      "inherits": [
+        "mail.render.mixin"
+      ],
+      "file": "addons/mail/models/mail_composer_mixin.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.followers",
+      "class": "MailFollowers",
+      "inherits": null,
+      "file": "addons/mail/models/mail_followers.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.gateway.allowed",
+      "class": "MailGatewayAllowed",
+      "inherits": null,
+      "file": "addons/mail/models/mail_gateway_allowed.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.ice.server",
+      "class": "MailIceServer",
+      "inherits": null,
+      "file": "addons/mail/models/mail_ice_server.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.link.preview",
+      "class": "MailLinkPreview",
+      "inherits": [
+        "bus.listener.mixin"
+      ],
+      "file": "addons/mail/models/mail_link_preview.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.mail",
+      "class": "MailMail",
+      "inherits": null,
+      "file": "addons/mail/models/mail_mail.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.message",
+      "class": "MailMessage",
+      "inherits": [
+        "bus.listener.mixin"
+      ],
+      "file": "addons/mail/models/mail_message.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.message.link.preview",
+      "class": "MessageMailLinkPreview",
+      "inherits": [
+        "bus.listener.mixin"
+      ],
+      "file": "addons/mail/models/mail_message_link_preview.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.message.reaction",
+      "class": "MailMessageReaction",
+      "inherits": null,
+      "file": "addons/mail/models/mail_message_reaction.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.message.schedule",
+      "class": "MailMessageSchedule",
+      "inherits": null,
+      "file": "addons/mail/models/mail_message_schedule.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.message.subtype",
+      "class": "MailMessageSubtype",
+      "inherits": null,
+      "file": "addons/mail/models/mail_message_subtype.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.message.translation",
+      "class": "MailMessageTranslation",
+      "inherits": null,
+      "file": "addons/mail/models/mail_message_translation.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.notification",
+      "class": "MailNotification",
+      "inherits": null,
+      "file": "addons/mail/models/mail_notification.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.presence",
+      "class": "MailPresence",
+      "inherits": "bus.listener.mixin",
+      "file": "addons/mail/models/mail_presence.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.push",
+      "class": "MailPush",
+      "inherits": null,
+      "file": "addons/mail/models/mail_push.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.push.device",
+      "class": "MailPushDevice",
+      "inherits": null,
+      "file": "addons/mail/models/mail_push_device.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.render.mixin",
+      "class": "MailRenderMixin",
+      "inherits": null,
+      "file": "addons/mail/models/mail_render_mixin.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.scheduled.message",
+      "class": "MailScheduledMessage",
+      "inherits": null,
+      "file": "addons/mail/models/mail_scheduled_message.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.template",
+      "class": "MailTemplate",
+      "inherits": [
+        "mail.render.mixin",
+        "template.reset.mixin"
+      ],
+      "file": "addons/mail/models/mail_template.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.thread",
+      "class": "MailThread",
+      "inherits": null,
+      "file": "addons/mail/models/mail_thread.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.thread.blacklist",
+      "class": "MailThreadBlacklist",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/mail/models/mail_thread_blacklist.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.thread.cc",
+      "class": "MailThreadCc",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/mail/models/mail_thread_cc.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.thread.main.attachment",
+      "class": "MailThreadMainAttachment",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/mail/models/mail_thread_main_attachment.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.tracking.duration.mixin",
+      "class": "MailTrackingDurationMixin",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/mail/models/mail_tracking_duration_mixin.py"
+    },
+    {
+      "module": "mail",
+      "model": "mail.tracking.value",
+      "class": "MailTrackingValue",
+      "inherits": null,
+      "file": "addons/mail/models/mail_tracking_value.py"
+    },
+    {
+      "module": "mail",
+      "model": "publisher_warranty.contract",
+      "class": "Publisher_WarrantyContract",
+      "inherits": null,
+      "file": "addons/mail/models/update.py"
+    },
+    {
+      "module": "mail",
+      "model": "res.partner",
+      "class": "ResPartner",
+      "inherits": [
+        "res.partner",
+        "mail.activity.mixin",
+        "mail.thread.blacklist"
+      ],
+      "file": "addons/mail/models/res_partner.py"
+    },
+    {
+      "module": "mail",
+      "model": "res.role",
+      "class": "ResRole",
+      "inherits": null,
+      "file": "addons/mail/models/res_role.py"
+    },
+    {
+      "module": "mail",
+      "model": "res.users.settings.volumes",
+      "class": "ResUsersSettingsVolumes",
+      "inherits": null,
+      "file": "addons/mail/models/res_users_settings_volumes.py"
+    },
+    {
+      "module": "mail",
+      "model": "template.reset.mixin",
+      "class": "TemplateResetMixin",
+      "inherits": null,
+      "file": "addons/mail/models/template_reset_mixin.py"
+    },
+    {
+      "module": "mail_bot",
+      "model": "mail.bot",
+      "class": "MailBot",
+      "inherits": null,
+      "file": "addons/mail_bot/models/mail_bot.py"
+    },
+    {
+      "module": "mail_group",
+      "model": "mail.group",
+      "class": "MailGroup",
+      "inherits": [
+        "mail.alias.mixin"
+      ],
+      "file": "addons/mail_group/models/mail_group.py"
+    },
+    {
+      "module": "mail_group",
+      "model": "mail.group.member",
+      "class": "MailGroupMember",
+      "inherits": null,
+      "file": "addons/mail_group/models/mail_group_member.py"
+    },
+    {
+      "module": "mail_group",
+      "model": "mail.group.message",
+      "class": "MailGroupMessage",
+      "inherits": null,
+      "file": "addons/mail_group/models/mail_group_message.py"
+    },
+    {
+      "module": "mail_group",
+      "model": "mail.group.moderation",
+      "class": "MailGroupModeration",
+      "inherits": null,
+      "file": "addons/mail_group/models/mail_group_moderation.py"
+    },
+    {
+      "module": "mail_plugin",
+      "model": "res.partner.iap",
+      "class": "ResPartnerIap",
+      "inherits": null,
+      "file": "addons/mail_plugin/models/res_partner_iap.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.bom",
+      "class": "MrpBom",
+      "inherits": [
+        "mail.thread",
+        "product.catalog.mixin"
+      ],
+      "file": "addons/mrp/models/mrp_bom.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.bom.byproduct",
+      "class": "MrpBomByproduct",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_bom.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.bom.line",
+      "class": "MrpBomLine",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_bom.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.production",
+      "class": "MrpProduction",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin",
+        "product.catalog.mixin"
+      ],
+      "file": "addons/mrp/models/mrp_production.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.production.group",
+      "class": "MrpProductionGroup",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_production.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.routing.workcenter",
+      "class": "MrpRoutingWorkcenter",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/mrp/models/mrp_routing.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.unbuild",
+      "class": "MrpUnbuild",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/mrp/models/mrp_unbuild.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workcenter",
+      "class": "MrpWorkcenter",
+      "inherits": [
+        "mail.thread",
+        "resource.mixin"
+      ],
+      "file": "addons/mrp/models/mrp_workcenter.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workcenter.capacity",
+      "class": "MrpWorkcenterCapacity",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_workcenter.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workcenter.productivity",
+      "class": "MrpWorkcenterProductivity",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_workcenter.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workcenter.productivity.loss",
+      "class": "MrpWorkcenterProductivityLoss",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_workcenter.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workcenter.productivity.loss.type",
+      "class": "MrpWorkcenterProductivityLossType",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_workcenter.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workcenter.tag",
+      "class": "MrpWorkcenterTag",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_workcenter.py"
+    },
+    {
+      "module": "mrp",
+      "model": "mrp.workorder",
+      "class": "MrpWorkorder",
+      "inherits": null,
+      "file": "addons/mrp/models/mrp_workorder.py"
+    },
+    {
+      "module": "mrp_account",
+      "model": "mrp.workcenter",
+      "class": "MrpWorkcenter",
+      "inherits": [
+        "mrp.workcenter",
+        "analytic.mixin"
+      ],
+      "file": "addons/mrp_account/models/mrp_workcenter.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "account.account",
+      "class": "AccountAccount",
+      "inherits": [
+        "account.account",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/account_account.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "account.cash.rounding",
+      "class": "AccountCashRounding",
+      "inherits": [
+        "account.cash.rounding",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_order.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "account.fiscal.position",
+      "class": "AccountFiscalPosition",
+      "inherits": [
+        "account.fiscal.position",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/account_fiscal_position.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "account.move",
+      "class": "AccountMove",
+      "inherits": [
+        "account.move",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/account_move.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "account.tax",
+      "class": "AccountTax",
+      "inherits": [
+        "account.tax",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/account_tax.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "account.tax.group",
+      "class": "AccountTaxGroup",
+      "inherits": [
+        "account.tax.group",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/account_tax_group.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "decimal.precision",
+      "class": "DecimalPrecision",
+      "inherits": [
+        "decimal.precision",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/decimal_precision.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "ir.module.module",
+      "class": "IrModuleModule",
+      "inherits": [
+        "pos.load.mixin",
+        "ir.module.module"
+      ],
+      "file": "addons/point_of_sale/models/ir_module_module.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.bill",
+      "class": "PosBill",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_bill.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.bus.mixin",
+      "class": "PosBusMixin",
+      "inherits": null,
+      "file": "addons/point_of_sale/models/pos_bus_mixin.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.category",
+      "class": "PosCategory",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_category.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.config",
+      "class": "PosConfig",
+      "inherits": [
+        "pos.bus.mixin",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_config.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.load.mixin",
+      "class": "PosLoadMixin",
+      "inherits": null,
+      "file": "addons/point_of_sale/models/pos_load_mixin.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.note",
+      "class": "PosNote",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_note.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.order",
+      "class": "PosOrder",
+      "inherits": [
+        "portal.mixin",
+        "pos.bus.mixin",
+        "pos.load.mixin",
+        "mail.thread"
+      ],
+      "file": "addons/point_of_sale/models/pos_order.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.order.line",
+      "class": "PosOrderLine",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_order.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.pack.operation.lot",
+      "class": "PosPackOperationLot",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_order.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.payment",
+      "class": "PosPayment",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_payment.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.payment.method",
+      "class": "PosPaymentMethod",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_payment_method.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.preset",
+      "class": "PosPreset",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_preset.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.printer",
+      "class": "PosPrinter",
+      "inherits": [
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_printer.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "pos.session",
+      "class": "PosSession",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin",
+        "pos.bus.mixin",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/pos_session.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.attribute",
+      "class": "ProductAttribute",
+      "inherits": [
+        "product.attribute",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_attribute.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.attribute.custom.value",
+      "class": "ProductAttributeCustomValue",
+      "inherits": [
+        "product.attribute.custom.value",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_attribute.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.category",
+      "class": "ProductCategory",
+      "inherits": [
+        "product.category",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_category.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.combo",
+      "class": "ProductCombo",
+      "inherits": [
+        "product.combo",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_combo.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.combo.item",
+      "class": "ProductComboItem",
+      "inherits": [
+        "product.combo.item",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_combo_item.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.pricelist",
+      "class": "ProductPricelist",
+      "inherits": [
+        "product.pricelist",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_pricelist.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.pricelist.item",
+      "class": "ProductPricelistItem",
+      "inherits": [
+        "product.pricelist.item",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_pricelist.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.product",
+      "class": "ProductProduct",
+      "inherits": [
+        "product.product",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_product.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.tag",
+      "class": "ProductTag",
+      "inherits": [
+        "product.tag",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_tag.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.template",
+      "class": "ProductTemplate",
+      "inherits": [
+        "product.template",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_template.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.template.attribute.exclusion",
+      "class": "ProductTemplateAttributeExclusion",
+      "inherits": [
+        "product.template.attribute.exclusion",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_attribute.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.template.attribute.line",
+      "class": "ProductTemplateAttributeLine",
+      "inherits": [
+        "product.template.attribute.line",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_attribute.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.template.attribute.value",
+      "class": "ProductTemplateAttributeValue",
+      "inherits": [
+        "product.template.attribute.value",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_attribute.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "product.uom",
+      "class": "ProductUom",
+      "inherits": [
+        "product.uom",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/product_uom.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "report.point_of_sale.report_saledetails",
+      "class": "ReportPoint_Of_SaleReport_Saledetails",
+      "inherits": null,
+      "file": "addons/point_of_sale/models/report_sale_details.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.company",
+      "class": "ResCompany",
+      "inherits": [
+        "res.company",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_company.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.country",
+      "class": "ResCountry",
+      "inherits": [
+        "res.country",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_country.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.country.state",
+      "class": "ResCountryState",
+      "inherits": [
+        "res.country.state",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_country_state.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.currency",
+      "class": "ResCurrency",
+      "inherits": [
+        "res.currency",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_currency.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.lang",
+      "class": "ResLang",
+      "inherits": [
+        "res.lang",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_lang.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.partner",
+      "class": "ResPartner",
+      "inherits": [
+        "res.partner",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_partner.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "res.users",
+      "class": "ResUsers",
+      "inherits": [
+        "res.users",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/res_users.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "resource.calendar.attendance",
+      "class": "ResourceCalendarAttendance",
+      "inherits": [
+        "resource.calendar.attendance",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/resource_calendar_attendance.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "stock.picking.type",
+      "class": "StockPickingType",
+      "inherits": [
+        "stock.picking.type",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/stock_picking.py"
+    },
+    {
+      "module": "point_of_sale",
+      "model": "uom.uom",
+      "class": "UomUom",
+      "inherits": [
+        "uom.uom",
+        "pos.load.mixin"
+      ],
+      "file": "addons/point_of_sale/models/uom.py"
+    },
+    {
+      "module": "product",
+      "model": "product.attribute",
+      "class": "ProductAttribute",
+      "inherits": null,
+      "file": "addons/product/models/product_attribute.py"
+    },
+    {
+      "module": "product",
+      "model": "product.attribute.custom.value",
+      "class": "ProductAttributeCustomValue",
+      "inherits": null,
+      "file": "addons/product/models/product_attribute_custom_value.py"
+    },
+    {
+      "module": "product",
+      "model": "product.attribute.value",
+      "class": "ProductAttributeValue",
+      "inherits": null,
+      "file": "addons/product/models/product_attribute_value.py"
+    },
+    {
+      "module": "product",
+      "model": "product.catalog.mixin",
+      "class": "ProductCatalogMixin",
+      "inherits": null,
+      "file": "addons/product/models/product_catalog_mixin.py"
+    },
+    {
+      "module": "product",
+      "model": "product.category",
+      "class": "ProductCategory",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/product/models/product_category.py"
+    },
+    {
+      "module": "product",
+      "model": "product.combo",
+      "class": "ProductCombo",
+      "inherits": null,
+      "file": "addons/product/models/product_combo.py"
+    },
+    {
+      "module": "product",
+      "model": "product.combo.item",
+      "class": "ProductComboItem",
+      "inherits": null,
+      "file": "addons/product/models/product_combo_item.py"
+    },
+    {
+      "module": "product",
+      "model": "product.document",
+      "class": "ProductDocument",
+      "inherits": null,
+      "file": "addons/product/models/product_document.py"
+    },
+    {
+      "module": "product",
+      "model": "product.pricelist",
+      "class": "ProductPricelist",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/product/models/product_pricelist.py"
+    },
+    {
+      "module": "product",
+      "model": "product.pricelist.item",
+      "class": "ProductPricelistItem",
+      "inherits": null,
+      "file": "addons/product/models/product_pricelist_item.py"
+    },
+    {
+      "module": "product",
+      "model": "product.product",
+      "class": "ProductProduct",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/product/models/product_product.py"
+    },
+    {
+      "module": "product",
+      "model": "product.supplierinfo",
+      "class": "ProductSupplierinfo",
+      "inherits": null,
+      "file": "addons/product/models/product_supplierinfo.py"
+    },
+    {
+      "module": "product",
+      "model": "product.tag",
+      "class": "ProductTag",
+      "inherits": null,
+      "file": "addons/product/models/product_tag.py"
+    },
+    {
+      "module": "product",
+      "model": "product.template",
+      "class": "ProductTemplate",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin",
+        "image.mixin"
+      ],
+      "file": "addons/product/models/product_template.py"
+    },
+    {
+      "module": "product",
+      "model": "product.template.attribute.exclusion",
+      "class": "ProductTemplateAttributeExclusion",
+      "inherits": null,
+      "file": "addons/product/models/product_template_attribute_exclusion.py"
+    },
+    {
+      "module": "product",
+      "model": "product.template.attribute.line",
+      "class": "ProductTemplateAttributeLine",
+      "inherits": null,
+      "file": "addons/product/models/product_template_attribute_line.py"
+    },
+    {
+      "module": "product",
+      "model": "product.template.attribute.value",
+      "class": "ProductTemplateAttributeValue",
+      "inherits": null,
+      "file": "addons/product/models/product_template_attribute_value.py"
+    },
+    {
+      "module": "product",
+      "model": "product.uom",
+      "class": "ProductUom",
+      "inherits": null,
+      "file": "addons/product/models/product_uom.py"
+    },
+    {
+      "module": "project",
+      "model": "project.collaborator",
+      "class": "ProjectCollaborator",
+      "inherits": null,
+      "file": "addons/project/models/project_collaborator.py"
+    },
+    {
+      "module": "project",
+      "model": "project.milestone",
+      "class": "ProjectMilestone",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/project/models/project_milestone.py"
+    },
+    {
+      "module": "project",
+      "model": "project.project",
+      "class": "ProjectProject",
+      "inherits": [
+        "portal.mixin",
+        "mail.alias.mixin",
+        "rating.parent.mixin",
+        "mail.activity.mixin",
+        "mail.tracking.duration.mixin",
+        "analytic.plan.fields.mixin"
+      ],
+      "file": "addons/project/models/project_project.py"
+    },
+    {
+      "module": "project",
+      "model": "project.project.stage",
+      "class": "ProjectProjectStage",
+      "inherits": null,
+      "file": "addons/project/models/project_project_stage.py"
+    },
+    {
+      "module": "project",
+      "model": "project.role",
+      "class": "ProjectRole",
+      "inherits": null,
+      "file": "addons/project/models/project_role.py"
+    },
+    {
+      "module": "project",
+      "model": "project.tags",
+      "class": "ProjectTags",
+      "inherits": null,
+      "file": "addons/project/models/project_tags.py"
+    },
+    {
+      "module": "project",
+      "model": "project.task",
+      "class": "ProjectTask",
+      "inherits": [
+        "portal.mixin",
+        "mail.thread.cc",
+        "mail.activity.mixin",
+        "rating.mixin",
+        "mail.tracking.duration.mixin",
+        "html.field.history.mixin"
+      ],
+      "file": "addons/project/models/project_task.py"
+    },
+    {
+      "module": "project",
+      "model": "project.task.recurrence",
+      "class": "ProjectTaskRecurrence",
+      "inherits": null,
+      "file": "addons/project/models/project_task_recurrence.py"
+    },
+    {
+      "module": "project",
+      "model": "project.task.stage.personal",
+      "class": "ProjectTaskStagePersonal",
+      "inherits": null,
+      "file": "addons/project/models/project_task_stage_personal.py"
+    },
+    {
+      "module": "project",
+      "model": "project.task.type",
+      "class": "ProjectTaskType",
+      "inherits": null,
+      "file": "addons/project/models/project_task_type.py"
+    },
+    {
+      "module": "project",
+      "model": "project.update",
+      "class": "ProjectUpdate",
+      "inherits": [
+        "mail.thread.cc",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/project/models/project_update.py"
+    },
+    {
+      "module": "purchase",
+      "model": "purchase.bill.line.match",
+      "class": "PurchaseBillLineMatch",
+      "inherits": null,
+      "file": "addons/purchase/models/purchase_bill_line_match.py"
+    },
+    {
+      "module": "purchase",
+      "model": "purchase.order",
+      "class": "PurchaseOrder",
+      "inherits": [
+        "portal.mixin",
+        "product.catalog.mixin",
+        "mail.thread",
+        "mail.activity.mixin",
+        "account.document.import.mixin"
+      ],
+      "file": "addons/purchase/models/purchase_order.py"
+    },
+    {
+      "module": "purchase",
+      "model": "purchase.order.line",
+      "class": "PurchaseOrderLine",
+      "inherits": [
+        "analytic.mixin"
+      ],
+      "file": "addons/purchase/models/purchase_order_line.py"
+    },
+    {
+      "module": "purchase_edi_ubl_bis3",
+      "model": "purchase.edi.xml.ubl_bis3",
+      "class": "PurchaseEdiXmlUbl_Bis3",
+      "inherits": [
+        "account.edi.xml.ubl_bis3"
+      ],
+      "file": "addons/purchase_edi_ubl_bis3/models/purchase_edi_xml_ubl_bis3.py"
+    },
+    {
+      "module": "purchase_requisition",
+      "model": "purchase.order.group",
+      "class": "PurchaseOrderGroup",
+      "inherits": null,
+      "file": "addons/purchase_requisition/models/purchase.py"
+    },
+    {
+      "module": "purchase_requisition",
+      "model": "purchase.requisition",
+      "class": "PurchaseRequisition",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/purchase_requisition/models/purchase_requisition.py"
+    },
+    {
+      "module": "purchase_requisition",
+      "model": "purchase.requisition.line",
+      "class": "PurchaseRequisitionLine",
+      "inherits": [
+        "analytic.mixin"
+      ],
+      "file": "addons/purchase_requisition/models/purchase_requisition.py"
+    },
+    {
+      "module": "sale",
+      "model": "account.move",
+      "class": "AccountMove",
+      "inherits": [
+        "account.move",
+        "utm.mixin"
+      ],
+      "file": "addons/sale/models/account_move.py"
+    },
+    {
+      "module": "sale",
+      "model": "sale.order",
+      "class": "SaleOrder",
+      "inherits": [
+        "portal.mixin",
+        "product.catalog.mixin",
+        "mail.thread",
+        "mail.activity.mixin",
+        "utm.mixin",
+        "account.document.import.mixin"
+      ],
+      "file": "addons/sale/models/sale_order.py"
+    },
+    {
+      "module": "sale",
+      "model": "sale.order.line",
+      "class": "SaleOrderLine",
+      "inherits": [
+        "analytic.mixin"
+      ],
+      "file": "addons/sale/models/sale_order_line.py"
+    },
+    {
+      "module": "sale_edi_ubl",
+      "model": "sale.edi.xml.ubl_bis3",
+      "class": "SaleEdiXmlUbl_Bis3",
+      "inherits": [
+        "account.edi.xml.ubl_bis3"
+      ],
+      "file": "addons/sale_edi_ubl/models/sale_edi_xml_ubl_bis3.py"
+    },
+    {
+      "module": "sale_loyalty",
+      "model": "sale.order.coupon.points",
+      "class": "SaleOrderCouponPoints",
+      "inherits": null,
+      "file": "addons/sale_loyalty/models/sale_order_coupon_points.py"
+    },
+    {
+      "module": "sale_management",
+      "model": "sale.order.template",
+      "class": "SaleOrderTemplate",
+      "inherits": null,
+      "file": "addons/sale_management/models/sale_order_template.py"
+    },
+    {
+      "module": "sale_management",
+      "model": "sale.order.template.line",
+      "class": "SaleOrderTemplateLine",
+      "inherits": null,
+      "file": "addons/sale_management/models/sale_order_template_line.py"
+    },
+    {
+      "module": "sale_pdf_quote_builder",
+      "model": "quotation.document",
+      "class": "QuotationDocument",
+      "inherits": null,
+      "file": "addons/sale_pdf_quote_builder/models/quotation_document.py"
+    },
+    {
+      "module": "sale_pdf_quote_builder",
+      "model": "sale.pdf.form.field",
+      "class": "SalePdfFormField",
+      "inherits": null,
+      "file": "addons/sale_pdf_quote_builder/models/sale_pdf_form_field.py"
+    },
+    {
+      "module": "sale_timesheet",
+      "model": "project.sale.line.employee.map",
+      "class": "ProjectSaleLineEmployeeMap",
+      "inherits": null,
+      "file": "addons/sale_timesheet/models/project_sale_line_employee_map.py"
+    },
+    {
+      "module": "sales_team",
+      "model": "crm.tag",
+      "class": "CrmTag",
+      "inherits": null,
+      "file": "addons/sales_team/models/crm_tag.py"
+    },
+    {
+      "module": "sales_team",
+      "model": "crm.team",
+      "class": "CrmTeam",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/sales_team/models/crm_team.py"
+    },
+    {
+      "module": "sales_team",
+      "model": "crm.team.member",
+      "class": "CrmTeamMember",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/sales_team/models/crm_team_member.py"
+    },
+    {
+      "module": "stock",
+      "model": "product.removal",
+      "class": "ProductRemoval",
+      "inherits": null,
+      "file": "addons/stock/models/product_strategy.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.location",
+      "class": "StockLocation",
+      "inherits": null,
+      "file": "addons/stock/models/stock_location.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.lot",
+      "class": "StockLot",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/stock/models/stock_lot.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.move",
+      "class": "StockMove",
+      "inherits": null,
+      "file": "addons/stock/models/stock_move.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.move.line",
+      "class": "StockMoveLine",
+      "inherits": null,
+      "file": "addons/stock/models/stock_move_line.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.package",
+      "class": "StockPackage",
+      "inherits": null,
+      "file": "addons/stock/models/stock_package.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.package.history",
+      "class": "StockPackageHistory",
+      "inherits": null,
+      "file": "addons/stock/models/stock_package_history.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.package.type",
+      "class": "StockPackageType",
+      "inherits": null,
+      "file": "addons/stock/models/stock_package_type.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.picking",
+      "class": "StockPicking",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/stock/models/stock_picking.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.picking.type",
+      "class": "StockPickingType",
+      "inherits": null,
+      "file": "addons/stock/models/stock_picking.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.putaway.rule",
+      "class": "StockPutawayRule",
+      "inherits": null,
+      "file": "addons/stock/models/product_strategy.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.quant",
+      "class": "StockQuant",
+      "inherits": null,
+      "file": "addons/stock/models/stock_quant.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.reference",
+      "class": "StockReference",
+      "inherits": null,
+      "file": "addons/stock/models/stock_reference.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.replenish.mixin",
+      "class": "StockReplenishMixin",
+      "inherits": null,
+      "file": "addons/stock/models/stock_replenish_mixin.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.route",
+      "class": "StockRoute",
+      "inherits": null,
+      "file": "addons/stock/models/stock_location.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.rule",
+      "class": "StockRule",
+      "inherits": null,
+      "file": "addons/stock/models/stock_rule.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.scrap",
+      "class": "StockScrap",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/stock/models/stock_scrap.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.scrap.reason.tag",
+      "class": "StockScrapReasonTag",
+      "inherits": null,
+      "file": "addons/stock/models/stock_scrap.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.storage.category",
+      "class": "StockStorageCategory",
+      "inherits": null,
+      "file": "addons/stock/models/stock_storage_category.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.storage.category.capacity",
+      "class": "StockStorageCategoryCapacity",
+      "inherits": null,
+      "file": "addons/stock/models/stock_storage_category.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.warehouse",
+      "class": "StockWarehouse",
+      "inherits": null,
+      "file": "addons/stock/models/stock_warehouse.py"
+    },
+    {
+      "module": "stock",
+      "model": "stock.warehouse.orderpoint",
+      "class": "StockWarehouseOrderpoint",
+      "inherits": null,
+      "file": "addons/stock/models/stock_orderpoint.py"
+    },
+    {
+      "module": "stock_account",
+      "model": "product.value",
+      "class": "ProductValue",
+      "inherits": null,
+      "file": "addons/stock_account/models/product_value.py"
+    },
+    {
+      "module": "stock_landed_costs",
+      "model": "stock.landed.cost",
+      "class": "StockLandedCost",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/stock_landed_costs/models/stock_landed_cost.py"
+    },
+    {
+      "module": "stock_landed_costs",
+      "model": "stock.landed.cost.lines",
+      "class": "StockLandedCostLines",
+      "inherits": null,
+      "file": "addons/stock_landed_costs/models/stock_landed_cost.py"
+    },
+    {
+      "module": "stock_landed_costs",
+      "model": "stock.valuation.adjustment.lines",
+      "class": "StockValuationAdjustmentLines",
+      "inherits": null,
+      "file": "addons/stock_landed_costs/models/stock_landed_cost.py"
+    },
+    {
+      "module": "stock_picking_batch",
+      "model": "stock.picking.batch",
+      "class": "StockPickingBatch",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin"
+      ],
+      "file": "addons/stock_picking_batch/models/stock_picking_batch.py"
+    },
+    {
+      "module": "web",
+      "model": "base.document.layout",
+      "class": "BaseDocumentLayout",
+      "inherits": null,
+      "file": "addons/web/models/base_document_layout.py"
+    },
+    {
+      "module": "web",
+      "model": "res.users.settings.embedded.action",
+      "class": "ResUsersSettingsEmbeddedAction",
+      "inherits": null,
+      "file": "addons/web/models/res_users_settings_embedded_action.py"
+    },
+    {
+      "module": "web_tour",
+      "model": "web_tour.tour",
+      "class": "Web_TourTour",
+      "inherits": null,
+      "file": "addons/web_tour/models/tour.py"
+    },
+    {
+      "module": "web_tour",
+      "model": "web_tour.tour.step",
+      "class": "Web_TourTourStep",
+      "inherits": null,
+      "file": "addons/web_tour/models/tour.py"
+    },
+    {
+      "module": "website",
+      "model": "ir.model",
+      "class": "IrModel",
+      "inherits": [
+        "ir.model"
+      ],
+      "file": "addons/website/models/website_form.py"
+    },
+    {
+      "module": "website",
+      "model": "ir.module.module",
+      "class": "IrModuleModule",
+      "inherits": [
+        "ir.module.module"
+      ],
+      "file": "addons/website/models/ir_module_module.py"
+    },
+    {
+      "module": "website",
+      "model": "ir.ui.view",
+      "class": "IrUiView",
+      "inherits": [
+        "ir.ui.view",
+        "website.seo.metadata"
+      ],
+      "file": "addons/website/models/ir_ui_view.py"
+    },
+    {
+      "module": "website",
+      "model": "res.partner",
+      "class": "ResPartner",
+      "inherits": [
+        "res.partner",
+        "website.published.multi.mixin"
+      ],
+      "file": "addons/website/models/res_partner.py"
+    },
+    {
+      "module": "website",
+      "model": "theme.ir.asset",
+      "class": "ThemeIrAsset",
+      "inherits": null,
+      "file": "addons/website/models/theme_models.py"
+    },
+    {
+      "module": "website",
+      "model": "theme.ir.attachment",
+      "class": "ThemeIrAttachment",
+      "inherits": null,
+      "file": "addons/website/models/theme_models.py"
+    },
+    {
+      "module": "website",
+      "model": "theme.ir.ui.view",
+      "class": "ThemeIrUiView",
+      "inherits": null,
+      "file": "addons/website/models/theme_models.py"
+    },
+    {
+      "module": "website",
+      "model": "theme.utils",
+      "class": "ThemeUtils",
+      "inherits": null,
+      "file": "addons/website/models/theme_models.py"
+    },
+    {
+      "module": "website",
+      "model": "theme.website.menu",
+      "class": "ThemeWebsiteMenu",
+      "inherits": null,
+      "file": "addons/website/models/theme_models.py"
+    },
+    {
+      "module": "website",
+      "model": "theme.website.page",
+      "class": "ThemeWebsitePage",
+      "inherits": [
+        "website.page_options.mixin"
+      ],
+      "file": "addons/website/models/theme_models.py"
+    },
+    {
+      "module": "website",
+      "model": "website",
+      "class": "Website",
+      "inherits": null,
+      "file": "addons/website/models/website.py"
+    },
+    {
+      "module": "website",
+      "model": "website.assets",
+      "class": "WebsiteAssets",
+      "inherits": null,
+      "file": "addons/website/models/assets.py"
+    },
+    {
+      "module": "website",
+      "model": "website.configurator.feature",
+      "class": "WebsiteConfiguratorFeature",
+      "inherits": null,
+      "file": "addons/website/models/website_configurator_feature.py"
+    },
+    {
+      "module": "website",
+      "model": "website.controller.page",
+      "class": "WebsiteControllerPage",
+      "inherits": [
+        "website.published.multi.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website/models/website_controller_page.py"
+    },
+    {
+      "module": "website",
+      "model": "website.cover_properties.mixin",
+      "class": "WebsiteCover_PropertiesMixin",
+      "inherits": null,
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.html.text.processor",
+      "class": "WebsiteHTMLTextProcessor",
+      "inherits": null,
+      "file": "addons/website/models/html_text_processor.py"
+    },
+    {
+      "module": "website",
+      "model": "website.menu",
+      "class": "WebsiteMenu",
+      "inherits": null,
+      "file": "addons/website/models/website_menu.py"
+    },
+    {
+      "module": "website",
+      "model": "website.multi.mixin",
+      "class": "WebsiteMultiMixin",
+      "inherits": null,
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.page",
+      "class": "WebsitePage",
+      "inherits": [
+        "website.published.multi.mixin",
+        "website.searchable.mixin",
+        "website.page_options.mixin"
+      ],
+      "file": "addons/website/models/website_page.py"
+    },
+    {
+      "module": "website",
+      "model": "website.page.properties",
+      "class": "WebsitePageProperties",
+      "inherits": [
+        "website.page.properties.base"
+      ],
+      "file": "addons/website/models/website_page_properties.py"
+    },
+    {
+      "module": "website",
+      "model": "website.page.properties.base",
+      "class": "WebsitePagePropertiesBase",
+      "inherits": null,
+      "file": "addons/website/models/website_page_properties.py"
+    },
+    {
+      "module": "website",
+      "model": "website.page_options.mixin",
+      "class": "WebsitePageOptionsMixin",
+      "inherits": [
+        "website.page_visibility_options.mixin"
+      ],
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.page_visibility_options.mixin",
+      "class": "WebsitePageVisibilityOptionsMixin",
+      "inherits": null,
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.published.mixin",
+      "class": "WebsitePublishedMixin",
+      "inherits": null,
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.published.multi.mixin",
+      "class": "WebsitePublishedMultiMixin",
+      "inherits": [
+        "website.published.mixin",
+        "website.multi.mixin"
+      ],
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.rewrite",
+      "class": "WebsiteRewrite",
+      "inherits": null,
+      "file": "addons/website/models/website_rewrite.py"
+    },
+    {
+      "module": "website",
+      "model": "website.route",
+      "class": "WebsiteRoute",
+      "inherits": null,
+      "file": "addons/website/models/website_rewrite.py"
+    },
+    {
+      "module": "website",
+      "model": "website.searchable.mixin",
+      "class": "WebsiteSearchableMixin",
+      "inherits": null,
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.seo.metadata",
+      "class": "WebsiteSeoMetadata",
+      "inherits": null,
+      "file": "addons/website/models/mixins.py"
+    },
+    {
+      "module": "website",
+      "model": "website.snippet.filter",
+      "class": "WebsiteSnippetFilter",
+      "inherits": [
+        "website.published.multi.mixin"
+      ],
+      "file": "addons/website/models/website_snippet_filter.py"
+    },
+    {
+      "module": "website",
+      "model": "website.technical.page",
+      "class": "WebsiteTechnicalPage",
+      "inherits": null,
+      "file": "addons/website/models/website_technical_page.py"
+    },
+    {
+      "module": "website",
+      "model": "website.track",
+      "class": "WebsiteTrack",
+      "inherits": null,
+      "file": "addons/website/models/website_visitor.py"
+    },
+    {
+      "module": "website",
+      "model": "website.visitor",
+      "class": "WebsiteVisitor",
+      "inherits": null,
+      "file": "addons/website/models/website_visitor.py"
+    },
+    {
+      "module": "website_blog",
+      "model": "blog.blog",
+      "class": "BlogBlog",
+      "inherits": [
+        "mail.thread",
+        "website.seo.metadata",
+        "website.multi.mixin",
+        "website.cover_properties.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_blog/models/website_blog.py"
+    },
+    {
+      "module": "website_blog",
+      "model": "blog.post",
+      "class": "BlogPost",
+      "inherits": [
+        "mail.thread",
+        "website.seo.metadata",
+        "website.published.multi.mixin",
+        "website.page_visibility_options.mixin",
+        "website.cover_properties.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_blog/models/website_blog.py"
+    },
+    {
+      "module": "website_blog",
+      "model": "blog.tag",
+      "class": "BlogTag",
+      "inherits": [
+        "website.seo.metadata"
+      ],
+      "file": "addons/website_blog/models/website_blog.py"
+    },
+    {
+      "module": "website_blog",
+      "model": "blog.tag.category",
+      "class": "BlogTagCategory",
+      "inherits": null,
+      "file": "addons/website_blog/models/website_blog.py"
+    },
+    {
+      "module": "website_crm_iap_reveal",
+      "model": "crm.reveal.rule",
+      "class": "CrmRevealRule",
+      "inherits": null,
+      "file": "addons/website_crm_iap_reveal/models/crm_reveal_rule.py"
+    },
+    {
+      "module": "website_crm_iap_reveal",
+      "model": "crm.reveal.view",
+      "class": "CrmRevealView",
+      "inherits": null,
+      "file": "addons/website_crm_iap_reveal/models/crm_reveal_view.py"
+    },
+    {
+      "module": "website_crm_partner_assign",
+      "model": "res.partner.activation",
+      "class": "ResPartnerActivation",
+      "inherits": null,
+      "file": "addons/website_crm_partner_assign/models/res_partner_activation.py"
+    },
+    {
+      "module": "website_crm_partner_assign",
+      "model": "res.partner.grade",
+      "class": "ResPartnerGrade",
+      "inherits": [
+        "res.partner.grade",
+        "website.published.mixin"
+      ],
+      "file": "addons/website_crm_partner_assign/models/res_partner_grade.py"
+    },
+    {
+      "module": "website_customer",
+      "model": "res.partner.tag",
+      "class": "ResPartnerTag",
+      "inherits": [
+        "website.published.mixin"
+      ],
+      "file": "addons/website_customer/models/res_partner.py"
+    },
+    {
+      "module": "website_event",
+      "model": "event.event",
+      "class": "EventEvent",
+      "inherits": [
+        "event.event",
+        "website.seo.metadata",
+        "website.published.multi.mixin",
+        "website.cover_properties.mixin",
+        "website.searchable.mixin",
+        "website.page_visibility_options.mixin"
+      ],
+      "file": "addons/website_event/models/event_event.py"
+    },
+    {
+      "module": "website_event",
+      "model": "event.tag",
+      "class": "EventTag",
+      "inherits": [
+        "event.tag",
+        "website.published.multi.mixin"
+      ],
+      "file": "addons/website_event/models/event_tag.py"
+    },
+    {
+      "module": "website_event",
+      "model": "event.tag.category",
+      "class": "EventTagCategory",
+      "inherits": [
+        "event.tag.category",
+        "website.published.multi.mixin"
+      ],
+      "file": "addons/website_event/models/event_tag_category.py"
+    },
+    {
+      "module": "website_event",
+      "model": "website.event.menu",
+      "class": "WebsiteEventMenu",
+      "inherits": "website.seo.metadata",
+      "file": "addons/website_event/models/website_event_menu.py"
+    },
+    {
+      "module": "website_event_exhibitor",
+      "model": "event.sponsor",
+      "class": "EventSponsor",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin",
+        "website.published.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_event_exhibitor/models/event_sponsor.py"
+    },
+    {
+      "module": "website_event_exhibitor",
+      "model": "event.sponsor.type",
+      "class": "EventSponsorType",
+      "inherits": null,
+      "file": "addons/website_event_exhibitor/models/event_sponsor_type.py"
+    },
+    {
+      "module": "website_event_track",
+      "model": "event.track",
+      "class": "EventTrack",
+      "inherits": [
+        "mail.thread",
+        "mail.activity.mixin",
+        "website.seo.metadata",
+        "website.published.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_event_track/models/event_track.py"
+    },
+    {
+      "module": "website_event_track",
+      "model": "event.track.location",
+      "class": "EventTrackLocation",
+      "inherits": null,
+      "file": "addons/website_event_track/models/event_track_location.py"
+    },
+    {
+      "module": "website_event_track",
+      "model": "event.track.stage",
+      "class": "EventTrackStage",
+      "inherits": null,
+      "file": "addons/website_event_track/models/event_track_stage.py"
+    },
+    {
+      "module": "website_event_track",
+      "model": "event.track.tag",
+      "class": "EventTrackTag",
+      "inherits": null,
+      "file": "addons/website_event_track/models/event_track_tag.py"
+    },
+    {
+      "module": "website_event_track",
+      "model": "event.track.tag.category",
+      "class": "EventTrackTagCategory",
+      "inherits": null,
+      "file": "addons/website_event_track/models/event_track_tag_category.py"
+    },
+    {
+      "module": "website_event_track",
+      "model": "event.track.visitor",
+      "class": "EventTrackVisitor",
+      "inherits": null,
+      "file": "addons/website_event_track/models/event_track_visitor.py"
+    },
+    {
+      "module": "website_event_track_quiz",
+      "model": "event.quiz",
+      "class": "EventQuiz",
+      "inherits": null,
+      "file": "addons/website_event_track_quiz/models/event_quiz.py"
+    },
+    {
+      "module": "website_event_track_quiz",
+      "model": "event.quiz.answer",
+      "class": "EventQuizAnswer",
+      "inherits": null,
+      "file": "addons/website_event_track_quiz/models/event_quiz.py"
+    },
+    {
+      "module": "website_event_track_quiz",
+      "model": "event.quiz.question",
+      "class": "EventQuizQuestion",
+      "inherits": null,
+      "file": "addons/website_event_track_quiz/models/event_quiz.py"
+    },
+    {
+      "module": "website_forum",
+      "model": "forum.forum",
+      "class": "ForumForum",
+      "inherits": [
+        "mail.thread",
+        "image.mixin",
+        "website.seo.metadata",
+        "website.multi.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_forum/models/forum_forum.py"
+    },
+    {
+      "module": "website_forum",
+      "model": "forum.post",
+      "class": "ForumPost",
+      "inherits": [
+        "mail.thread",
+        "website.seo.metadata",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_forum/models/forum_post.py"
+    },
+    {
+      "module": "website_forum",
+      "model": "forum.post.reason",
+      "class": "ForumPostReason",
+      "inherits": null,
+      "file": "addons/website_forum/models/forum_post_reason.py"
+    },
+    {
+      "module": "website_forum",
+      "model": "forum.post.vote",
+      "class": "ForumPostVote",
+      "inherits": null,
+      "file": "addons/website_forum/models/forum_post_vote.py"
+    },
+    {
+      "module": "website_forum",
+      "model": "forum.tag",
+      "class": "ForumTag",
+      "inherits": [
+        "mail.thread",
+        "website.searchable.mixin",
+        "website.seo.metadata"
+      ],
+      "file": "addons/website_forum/models/forum_tag.py"
+    },
+    {
+      "module": "website_hr_recruitment",
+      "model": "hr.job",
+      "class": "HrJob",
+      "inherits": [
+        "hr.job",
+        "website.seo.metadata",
+        "website.published.multi.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_hr_recruitment/models/hr_job.py"
+    },
+    {
+      "module": "website_partner",
+      "model": "res.partner",
+      "class": "ResPartner",
+      "inherits": [
+        "res.partner",
+        "website.seo.metadata"
+      ],
+      "file": "addons/website_partner/models/res_partner.py"
+    },
+    {
+      "module": "website_profile",
+      "model": "gamification.badge",
+      "class": "GamificationBadge",
+      "inherits": [
+        "gamification.badge",
+        "website.published.mixin"
+      ],
+      "file": "addons/website_profile/models/gamification_badge.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "delivery.carrier",
+      "class": "DeliveryCarrier",
+      "inherits": [
+        "delivery.carrier",
+        "website.published.multi.mixin"
+      ],
+      "file": "addons/website_sale/models/delivery_carrier.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "product.feed",
+      "class": "ProductFeed",
+      "inherits": [
+        "mail.thread"
+      ],
+      "file": "addons/website_sale/models/product_feed.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "product.image",
+      "class": "ProductImage",
+      "inherits": [
+        "image.mixin"
+      ],
+      "file": "addons/website_sale/models/product_image.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "product.public.category",
+      "class": "ProductPublicCategory",
+      "inherits": [
+        "website.seo.metadata",
+        "website.multi.mixin",
+        "website.searchable.mixin",
+        "image.mixin"
+      ],
+      "file": "addons/website_sale/models/product_public_category.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "product.ribbon",
+      "class": "ProductRibbon",
+      "inherits": null,
+      "file": "addons/website_sale/models/product_ribbon.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "product.tag",
+      "class": "ProductTag",
+      "inherits": [
+        "website.multi.mixin",
+        "product.tag"
+      ],
+      "file": "addons/website_sale/models/product_tag.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "product.template",
+      "class": "ProductTemplate",
+      "inherits": [
+        "rating.mixin",
+        "product.template",
+        "website.seo.metadata",
+        "website.published.multi.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_sale/models/product_template.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "website.base.unit",
+      "class": "WebsiteBaseUnit",
+      "inherits": null,
+      "file": "addons/website_sale/models/website_base_unit.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "website.checkout.step",
+      "class": "WebsiteCheckoutStep",
+      "inherits": [
+        "website.published.multi.mixin"
+      ],
+      "file": "addons/website_sale/models/website_checkout_step.py"
+    },
+    {
+      "module": "website_sale",
+      "model": "website.sale.extra.field",
+      "class": "WebsiteSaleExtraField",
+      "inherits": null,
+      "file": "addons/website_sale/models/website_sale_extra_field.py"
+    },
+    {
+      "module": "website_sale_comparison",
+      "model": "product.attribute.category",
+      "class": "ProductAttributeCategory",
+      "inherits": null,
+      "file": "addons/website_sale_comparison/models/product_attribute_category.py"
+    },
+    {
+      "module": "website_sale_loyalty",
+      "model": "loyalty.program",
+      "class": "LoyaltyProgram",
+      "inherits": [
+        "loyalty.program",
+        "website.multi.mixin"
+      ],
+      "file": "addons/website_sale_loyalty/models/loyalty_program.py"
+    },
+    {
+      "module": "website_sale_wishlist",
+      "model": "product.wishlist",
+      "class": "ProductWishlist",
+      "inherits": null,
+      "file": "addons/website_sale_wishlist/models/product_wishlist.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.answer",
+      "class": "SlideAnswer",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_question.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.channel",
+      "class": "SlideChannel",
+      "inherits": [
+        "rating.mixin",
+        "mail.activity.mixin",
+        "image.mixin",
+        "website.cover_properties.mixin",
+        "website.seo.metadata",
+        "website.published.multi.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_slides/models/slide_channel.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.channel.partner",
+      "class": "SlideChannelPartner",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_channel_partner.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.channel.tag",
+      "class": "SlideChannelTag",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_channel_tag.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.channel.tag.group",
+      "class": "SlideChannelTagGroup",
+      "inherits": [
+        "website.published.mixin"
+      ],
+      "file": "addons/website_slides/models/slide_channel_tag.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.embed",
+      "class": "SlideEmbed",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_embed.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.question",
+      "class": "SlideQuestion",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_question.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.slide",
+      "class": "SlideSlide",
+      "inherits": [
+        "mail.thread",
+        "image.mixin",
+        "website.seo.metadata",
+        "website.published.mixin",
+        "website.searchable.mixin"
+      ],
+      "file": "addons/website_slides/models/slide_slide.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.slide.partner",
+      "class": "SlideSlidePartner",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_slide_partner.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.slide.resource",
+      "class": "SlideSlideResource",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_slide_resource.py"
+    },
+    {
+      "module": "website_slides",
+      "model": "slide.tag",
+      "class": "SlideTag",
+      "inherits": null,
+      "file": "addons/website_slides/models/slide_tag.py"
+    }
+  ]
+}
