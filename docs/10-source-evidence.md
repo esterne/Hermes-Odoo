@@ -73,7 +73,7 @@ Research snapshot:
 
 ## Caveats
 
-- Odoo's hosted pricing/plan restrictions are not the same thing as self-hosted Community source capabilities.
+- Odoo's hosted pricing/plan restrictions are not the same thing as self-hosted Community source capabilities. See [`docs/11-deployment-caveat-hosted-vs-self-hosted.md`](11-deployment-caveat-hosted-vs-self-hosted.md).
 - Installed addons determine the live API. A plain database and a production database can expose very different models and fields.
 - Custom modules can add fields, models, methods, controllers, and security rules.
 - Enterprise-only models/apps are intentionally out of scope.

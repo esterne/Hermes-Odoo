@@ -23,7 +23,7 @@ Odoo 19 Community source includes the `rpc` addon with:
 - `addons/rpc/controllers/jsonrpc.py` — legacy JSON-RPC endpoint
 - `addons/rpc/__manifest__.py` — auto-installed `RPC endpoints` addon
 
-Odoo's hosted-plan documentation says JSON-2 availability is restricted on hosted Odoo Online pricing tiers. For this repo, the target is **self-hosted / source-level Odoo 19 Community Edition**.
+Odoo's hosted-plan documentation says JSON-2 availability is restricted on hosted Odoo Online pricing tiers. For this repo, the target is **self-hosted / source-level Odoo 19 Community Edition**. See [Deployment caveat: hosted plans vs self-hosted Community](docs/11-deployment-caveat-hosted-vs-self-hosted.md) for the practical distinction and test commands.
 
 ## Docs
 
@@ -37,6 +37,7 @@ Odoo's hosted-plan documentation says JSON-2 availability is restricted on hoste
 8. [Integration patterns and examples](docs/08-integration-patterns.md)
 9. [Security checklist](docs/09-security-checklist.md)
 10. [Source evidence log](docs/10-source-evidence.md)
+11. [Deployment caveat: hosted plans vs self-hosted Community](docs/11-deployment-caveat-hosted-vs-self-hosted.md)
 
 ## Examples
 
