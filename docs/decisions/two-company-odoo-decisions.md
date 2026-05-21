@@ -23,6 +23,30 @@ Last updated: 2026-05-21
 | JSON-2 endpoint | `/json/2/res.users/context_get` | Confirmed present over HTTPS; unauthenticated request returns `401` with API-key message when `X-Odoo-Database: SimianSyndicate` is provided |
 | Remaining proxy/config note | Odoo generated metadata still exposes `http://...` canonical/og URLs during probe | Likely needs Odoo `proxy_mode` / `web.base.url` review after proxy changes |
 
+## Authenticated read-only inspection
+
+Checked through the Odoo web session on 2026-05-21 with temporary admin access.
+
+Findings:
+
+- Logged in as administrator user `erwin@simiansyndicate.co.za` on database `SimianSyndicate`.
+- Odoo session confirms user is admin, timezone is `Africa/Johannesburg`, and current company is `Simian Syndicate`.
+- `ir.config_parameter:web.base.url` is currently `http://www.simiansyndicate.co.za` and should be changed to `https://www.simiansyndicate.co.za` once proxy headers/proxy mode are correct.
+- No `web.base.url.freeze` parameter is currently set.
+- Company `Simian Syndicate` is configured with country `South Africa`, currency `ZAR`, email `erwin@simiansyndicate.co.za`, and website `http://www.simiansyndicate.co.za`.
+- Only one internal user is currently present: administrator login `erwin@simiansyndicate.co.za`.
+- No API keys exist yet for users.
+- API key UI path: top-right user menu → **My Preferences** → **Security** → **Add API Key**.
+- Installed app/module baseline is still very light: Website, Discuss/Mail, API docs, RPC endpoints, auth/security helpers, Google/Microsoft mail helpers, SMS/Snailmail/IAP, Cobalt theme, and base web modules. Sales/CRM/Accounting/Inventory/Purchase/Project are not installed yet.
+
+Recommended next changes, after confirmation:
+
+1. Update `web.base.url` to `https://www.simiansyndicate.co.za`.
+2. Update the company website field to `https://www.simiansyndicate.co.za`.
+3. Verify Odoo service config has `proxy_mode = True`.
+4. Verify OpenResty passes `X-Forwarded-Host`, `X-Forwarded-Proto`, `X-Forwarded-For`, and `X-Real-IP` to Odoo.
+5. Create a dedicated `Hermes Admin` user and API key, then rotate/remove temporary admin access.
+
 ## Current topology decision
 
 Decision: **Simian Syndicate and LA Logic will use separate Odoo databases.**
