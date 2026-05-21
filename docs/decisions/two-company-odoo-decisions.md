@@ -121,17 +121,19 @@ Creation status:
 
 Rationale:
 
+- LA Logic is a financial compliance company, so separation, auditability, and clean access boundaries matter more than setup speed.
 - Cleaner operational isolation between the two companies.
 - Separate backups/restores.
 - Separate users/API keys and permissions.
 - Separate accounting setup and data boundaries.
 - Avoids accidental cross-company leakage inside one multi-company database.
+- Keeps the architecture easy to explain: LA Logic has its own database, backups, users, API keys, and access policy.
 
 ## Current recommendation
 
 Treat `SimianSyndicate` as the dedicated Simian Syndicate database.
 
-Create LA Logic as a separate database when ready. Do **not** add LA Logic as a second company inside `SimianSyndicate`.
+Create LA Logic as a separate database when ready. Do **not** add LA Logic as a second company inside `SimianSyndicate`, especially given LA Logic's financial compliance role.
 
 ## Safe probe commands used
 

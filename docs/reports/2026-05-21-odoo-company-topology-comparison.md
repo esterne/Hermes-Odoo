@@ -18,9 +18,9 @@ There are two viable ways to run Simian Syndicate and LA Logic on the current Od
 2. **One Odoo instance with two separate databases**  
    Keep `SimianSyndicate` as-is and create a new `LALogic` database.
 
-My recommendation has shifted slightly from the original default. Given the current practical friction around server/container access and the fact that both businesses are owned/managed by you, I recommend a **short, deliberate pilot of Option A: one database with two companies**, provided we first tighten access rules and document exactly which records are shared vs company-specific.
+New context changes the recommendation materially: **LA Logic is a financial compliance company**. That makes separation, auditability, and independent recovery more important than speed of setup.
 
-If LA Logic needs hard isolation, independent backup/restore, or different future ownership/users/compliance, then we should stay with **Option B: two separate databases**. But for getting productive quickly, multi-company inside the existing database is probably the better next experiment.
+I now recommend **Option B: one Odoo instance with two separate databases**: keep `SimianSyndicate` as the Simian Syndicate database and create a separate `LALogic` database for LA Logic. The practical friction around database creation is real, but it is worth solving rather than accepting avoidable compliance/data-boundary risk.
 
 ---
 
@@ -149,62 +149,66 @@ Scoring: 1 = weak, 5 = strong.
 
 | Criterion | Weight | Option A: one DB / two companies | Weighted | Option B: two DBs | Weighted |
 |---|---:|---:|---:|---:|---:|
-| Fastest path to working LA Logic setup | 5 | 5 | 25 | 2 | 10 |
+| Fastest path to working LA Logic setup | 3 | 5 | 15 | 2 | 6 |
 | Hard data isolation | 5 | 3 | 15 | 5 | 25 |
-| Ease of admin/user management | 4 | 5 | 20 | 3 | 12 |
-| Independent backup/restore | 4 | 2 | 8 | 5 | 20 |
-| Consolidated reporting | 3 | 5 | 15 | 2 | 6 |
+| Compliance/audit boundary clarity | 5 | 2 | 10 | 5 | 25 |
+| Ease of admin/user management | 3 | 5 | 15 | 3 | 9 |
+| Independent backup/restore | 5 | 2 | 10 | 5 | 25 |
+| Consolidated reporting | 2 | 5 | 10 | 2 | 4 |
 | Lower chance of accidental cross-company leakage | 5 | 3 | 15 | 5 | 25 |
-| Ease of inter-company workflows | 2 | 5 | 10 | 2 | 4 |
-| Simplicity of deployment today | 4 | 5 | 20 | 2 | 8 |
-| Long-term portability/sell/spin-off | 3 | 2 | 6 | 5 | 15 |
-| **Total** |  |  | **134** |  | **125** |
+| Ease of inter-company workflows | 1 | 5 | 5 | 2 | 2 |
+| Simplicity of deployment today | 3 | 5 | 15 | 2 | 6 |
+| Long-term portability/sell/spin-off | 4 | 2 | 8 | 5 | 20 |
+| **Total** |  |  | **118** |  | **147** |
 
-The score is close. Option A wins mainly because of current setup speed and lower operational friction. Option B wins on pure isolation and backup discipline.
+With LA Logic treated as a financial compliance company, Option B wins clearly. The scoring shifts because compliance/audit clarity and independent recovery matter more than immediate setup speed.
 
 ---
 
 ## Recommendation
 
-### Recommended next step: pilot multi-company inside the existing database
+### Recommended next step: create `LALogic` as a separate database
 
-I recommend we **pilot LA Logic as a second company inside the existing `SimianSyndicate` database**, before committing to a separate `LALogic` database.
+I recommend we **do not add LA Logic as a second company inside `SimianSyndicate`**. LA Logic should get its own Odoo database: `LALogic`.
 
 Why:
 
-1. **We can proceed now.** Creating a second database is currently blocked by server/database-manager access.
-2. **Both companies are under the same owner/admin context.** That makes shared users and central administration useful.
-3. **Odoo multi-company is a first-class feature.** We should not avoid it purely out of fear, but we should configure it deliberately.
-4. **LA Logic probably benefits from shared setup at this early stage.** Contacts, users, configuration patterns, and reporting may be easier in one DB while the system is still young.
-5. **The current database is still early enough to adjust.** We have not imported years of messy operational data yet.
+1. **Financial compliance work deserves a hard boundary.** A separate database gives cleaner separation than record rules and company context inside one shared database.
+2. **Auditability is easier to explain.** “LA Logic has its own database, backups, users, API keys, and access policy” is clearer than “it shares a database, but Odoo rules separate the records.”
+3. **Independent backup/restore matters.** If LA Logic data needs to be restored, exported, retained, or archived, it should not affect Simian Syndicate.
+4. **Future risk is lower.** If LA Logic gains different staff, clients, compliance obligations, or operational processes, the architecture is already prepared.
+5. **The current setup friction is temporary.** Dockhand/server access or the Odoo database manager password solves database creation once. Data mixing risk, by contrast, becomes harder to unwind after real transactions exist.
 
 ### Recommendation boundary
 
-This recommendation changes if any of the following are true:
-
-- LA Logic must be sold, transferred, or operated independently later.
-- Different people should administer each business with strict data separation.
-- You need independent backup/restore as a hard requirement.
-- There is sensitive data in one company that should never be visible to users of the other.
-- The companies will have very different modules, workflows, fiscal setups, or compliance needs.
-
-If any of those become true, choose **two separate databases**.
+Only choose one shared multi-company database if LA Logic is genuinely lightweight, internally administered only, and there is no meaningful compliance/client-data separation requirement. Based on the financial compliance context, that does **not** sound like the right assumption.
 
 ---
 
-## Proposed safe pilot plan
+## Proposed implementation plan
 
-### Phase 1 — Add LA Logic as a company, not a branch
+### Phase 1 — Wait for database creation capability
 
-Create `LA Logic` under:
+Use one of:
+
+- Dockhand/container terminal access;
+- Odoo database manager/master password; or
+- direct server/SSH/PostgreSQL/Odoo deployment access.
+
+Do not create LA Logic as a company inside `SimianSyndicate` just to move faster.
+
+### Phase 2 — Create the separate database
+
+Create:
 
 ```text
-Settings → Users & Companies → Companies
+Database: LALogic
+Company: LA Logic
 ```
 
-Do **not** create it as a branch of Simian Syndicate. It should be a separate company in the same database, not a subdivision.
+Keep `SimianSyndicate` dedicated to Simian Syndicate.
 
-### Phase 2 — Configure company basics
+### Phase 3 — Configure LA Logic from a clean baseline
 
 For LA Logic:
 
@@ -217,59 +221,39 @@ For LA Logic:
 - Currency: ZAR, unless different
 - Document layout
 - Invoice/report footer details
+- Accounting/invoicing baseline
+- Dedicated Hermes API user/key for the `LALogic` database
 
-### Phase 3 — Accounting/Invoicing setup
+### Phase 4 — Security and audit boundary
 
-- Confirm/initialize LA Logic journals
-- Confirm invoice sequence prefix
-- Confirm tax configuration
-- Confirm bank/cash journals
-- Test one draft customer invoice in LA Logic context
-- Test one draft vendor bill in LA Logic context
+- Separate admin/API users per database
+- Separate backups per database
+- Separate access review for LA Logic
+- No shared credentials between databases
+- No LA Logic records in `SimianSyndicate` except deliberate non-sensitive references, if ever needed
 
-### Phase 4 — Access control audit
+### Phase 5 — Optional reporting integration later
 
-- Create or update users with explicit company access
-- Confirm daily users only see the companies they should see
-- Confirm Hermes Admin can administer both companies only if desired
-- Avoid using the all-powerful admin account for day-to-day operations
-
-### Phase 5 — Shared-data policy
-
-Decide this before importing real data:
-
-| Record type | Recommended policy |
-|---|---|
-| Contacts/customers/vendors | Shared initially only if the same real-world entities deal with both companies; otherwise company-specific |
-| Products/services | Shared only for truly common offerings; otherwise company-specific |
-| Accounting journals | Company-specific |
-| Taxes | Company-specific / localization-controlled |
-| Invoice sequences | Company-specific, with clear prefixes |
-| Email templates | Company-specific where customer-facing |
-| Websites | Company-specific if both companies have public sites |
-
-### Phase 6 — Go/no-go checkpoint
-
-After the pilot, decide:
-
-- If multi-company feels clean: continue with one DB.
-- If it feels risky/confusing: stop, create `LALogic` as a separate database once Dockhand/server access is ready.
+If you later need cross-company reporting, build it explicitly via exports, BI/spreadsheets, or an integration layer. Do not trade away compliance separation just to get consolidated reporting on day one.
 
 ---
 
 ## Rollback / exit plan
 
-Before adding real LA Logic transactions:
+The safest rollback plan is to avoid entering LA Logic data into `SimianSyndicate` in the first place.
 
-1. Take an Odoo database backup.
-2. Add LA Logic company and configure basics.
-3. Test with disposable draft records only.
-4. If the setup feels wrong, archive/delete test records and revert from backup if necessary.
+Before creating `LALogic`:
 
-After real transactions exist, splitting LA Logic into a separate database becomes much harder. The pilot should therefore happen before serious data entry/imports.
+1. Take/verify a backup of the current Odoo/PostgreSQL state.
+2. Confirm the database manager/master password or container command path.
+3. Create `LALogic` as a separate database.
+4. Test with disposable draft records inside `LALogic`.
+5. Only after verification, begin real LA Logic configuration and data entry.
+
+If someone accidentally creates LA Logic records inside `SimianSyndicate`, stop before real transactions accumulate and remove/archive the test records. Do not normalize that as the production topology.
 
 ---
 
 ## Final recommendation in one sentence
 
-**Pilot LA Logic as a second company inside the existing `SimianSyndicate` database now, because it is faster and operationally simpler at this stage — but keep a clear exit criterion: if data isolation or independent restore matters more than shared administration, move back to the separate `LALogic` database plan before entering real transactional data.**
+**Create LA Logic as its own separate `LALogic` database, because financial compliance work makes separation, auditability, and independent backup/restore more important than the speed advantage of a shared multi-company database.**
