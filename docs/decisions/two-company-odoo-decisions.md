@@ -7,8 +7,8 @@ Last updated: 2026-05-21
 | Item | Current value | Status |
 |---|---:|---|
 | Hostname | `eshost.dyndns.info` | Confirmed reachable |
-| Business website domain | `www.simiansyndicate.co.za` | Confirmed routing through OpenResty to Odoo over HTTPS |
-| Public HTTPS root | `https://eshost.dyndns.info/` | Reaches `openresty` / `ZimaOS-Gateway` static/default site, not Odoo paths |
+| Business website domain | `www.simiansyndicate.co.za` | Confirmed routing through Nginx Proxy Manager to Odoo over HTTPS |
+| Public HTTPS root | `https://eshost.dyndns.info/` | Reaches proxy/default site, not Odoo paths |
 | Public HTTP website root | `http://www.simiansyndicate.co.za/` | Redirects to `https://www.simiansyndicate.co.za/` |
 | Public HTTPS website root | `https://www.simiansyndicate.co.za/` | Valid Let's Encrypt certificate; serves Odoo website |
 | Odoo public URL | `https://www.simiansyndicate.co.za` | Confirmed Odoo via `/web/version` |
@@ -63,6 +63,18 @@ Changes made:
 - Stored the API key only in Cael's local secret env file `~/.hermes/profiles/cael/.env`; it is not committed to the repo or stored in `ens-files`.
 - Verified JSON-2 access using the new API key: `POST https://www.simiansyndicate.co.za/json/2/res.users/context_get` returned `200` with `X-Odoo-Database: SimianSyndicate`.
 
+## App installation changes
+
+Applied on 2026-05-21 through the `Hermes Admin` JSON-2 API key.
+
+Changes made:
+
+- Installed the Odoo Community `account` module, shown in Apps as **Invoicing**.
+- Verified `ir.module.module` reports `account` / `Invoicing` as `installed`.
+- Confirmed default accounting journals were created for company `Simian Syndicate`: Sales, Purchases, Bank, Miscellaneous Operations, Exchange Difference, and Cash Basis Taxes.
+- Assigned `Hermes Admin` to `Accounting / Administrator` so the agent can inspect and configure accounting/invoicing models via the API.
+- Confirmed administrator user `erwin@simiansyndicate.co.za` already had `Accounting / Administrator` access.
+
 Post-change public verification:
 
 - `http://www.simiansyndicate.co.za` redirects to HTTPS.
@@ -70,9 +82,9 @@ Post-change public verification:
 - `https://www.simiansyndicate.co.za/web/login` serves Odoo.
 - Canonical URLs now use `https://www.simiansyndicate.co.za/...`.
 - Direct `:8069` URLs no longer appear in the checked public HTML.
-- Remaining issue: OpenGraph `og:url` metadata still reports `http://www.simiansyndicate.co.za/...`. This likely requires server-side proxy config review: Odoo `proxy_mode = True` and OpenResty `X-Forwarded-Proto https` / related headers. This cannot be fully changed from inside the Odoo database alone.
+- Remaining issue: OpenGraph `og:url` metadata still reports `http://www.simiansyndicate.co.za/...`. This likely requires server-side proxy config review: Odoo `proxy_mode = True` and Nginx Proxy Manager forwarding of `X-Forwarded-Proto https` / related headers. This cannot be fully changed from inside the Odoo database alone.
 
-Follow-up needed on Zimaboard/OpenResty/Odoo service config:
+Follow-up needed on Zimaboard/Nginx Proxy Manager/Odoo service config:
 
 ```nginx
 proxy_set_header Host $host;
@@ -101,6 +113,11 @@ Current database:
 Planned database:
 
 - `LALogic` — LA Logic
+
+Creation status:
+
+- `https://www.simiansyndicate.co.za/web/database/list` currently returns only `SimianSyndicate`.
+- Creating `LALogic` requires the Odoo database manager/master password or direct server/container access. The existing `Hermes Admin` database API key can administer records inside `SimianSyndicate`, but it cannot create a new PostgreSQL/Odoo database by itself.
 
 Rationale:
 
@@ -141,5 +158,5 @@ The JSON-2 command intentionally omitted an API key and returned `401`, which co
 - Do not commit Odoo admin passwords, API keys, database passwords, exports, or backups.
 - For API integration, create a dedicated Odoo bot/API user with minimum required permissions.
 - Use bearer API keys only in local shell/session secrets, never in repo docs.
-- Production HTTPS now routes `www.simiansyndicate.co.za` to Odoo through OpenResty.
-- Review Odoo proxy settings because generated canonical/open-graph URLs still showed `http://www.simiansyndicate.co.za/...` and `http://eshost.dyndns.info:8069/...` during the HTTPS probe. Check Odoo `proxy_mode`, reverse-proxy `X-Forwarded-*` headers, and the `web.base.url` system parameter.
+- Production HTTPS now routes `www.simiansyndicate.co.za` to Odoo through Nginx Proxy Manager.
+- Review Odoo proxy settings because generated OpenGraph URLs still show `http://www.simiansyndicate.co.za/...` during HTTPS probes. Check Odoo `proxy_mode`, Nginx Proxy Manager `X-Forwarded-*` headers, and the `web.base.url` system parameter.
