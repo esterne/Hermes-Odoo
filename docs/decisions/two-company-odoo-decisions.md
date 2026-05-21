@@ -103,6 +103,24 @@ proxy_mode = True
 
 After changing service config, restart Odoo/OpenResty and re-check `og:url`.
 
+## LA Logic database setup
+
+Applied on 2026-05-21 after Erwin created the separate `lalogic` database.
+
+Changes made:
+
+- Renamed the default company record from `My Company` to `LA Logic`.
+- Set LA Logic company email to `ls@lalogic.co.za`.
+- Set LA Logic company website to `https://www.simiansyndicate.co.za` as the current shared public Odoo host. This can be changed later if LA Logic gets its own public domain.
+- Updated `ir.config_parameter:web.base.url` in `lalogic` to `https://www.simiansyndicate.co.za`.
+- Added `ir.config_parameter:web.base.url.freeze = True` in `lalogic`.
+- Created internal admin/settings user `Hermes Admin` with login `hermes@lalogic.co.za`.
+- Set the `Hermes Admin` email/contact address to Cael's AgentMail address: `cael.ai@agentmail.to`.
+- Created one persistent API key for the LA Logic `Hermes Admin` user named `Hermes Agent JSON-2`.
+- Stored the LA Logic API key only in Cael's local secret env file `~/.hermes/profiles/cael/.env`; it is not committed to the repo or stored in `ens-files`.
+- Verified JSON-2 access using the new API key: `POST https://www.simiansyndicate.co.za/json/2/res.users/context_get` returned `200` with `X-Odoo-Database: lalogic`.
+- Left Odoo Community `account` / **Invoicing** uninstalled in `lalogic` pending an explicit module-baseline decision.
+
 ## Current topology decision
 
 Decision: **Simian Syndicate and LA Logic will use separate Odoo databases.**
@@ -121,8 +139,8 @@ Creation status:
 - `https://www.simiansyndicate.co.za/web/database/list` currently returns `SimianSyndicate` and `lalogic`.
 - Authenticated access to `lalogic` was verified with the LA Logic admin login supplied by Erwin on 2026-05-21.
 - The database was created lowercase as `lalogic`; use this exact database name in API headers and scripts, not `LALogic`.
-- Initial LA Logic company record still shows Odoo default company name `My Company`; rename/configure it to `LA Logic` during setup.
-- Initial `web.base.url` in `lalogic` is `http://www.simiansyndicate.co.za`; update/freeze it to the intended LA Logic public URL once the domain/routing decision is made.
+- LA Logic company record is configured as `LA Logic`.
+- LA Logic `web.base.url` is currently frozen to `https://www.simiansyndicate.co.za`, the current shared public Odoo host. Change this later only if LA Logic gets its own public domain/routing.
 - The Odoo Community `account` / **Invoicing** module is currently uninstalled in `lalogic`.
 
 Rationale:
@@ -137,9 +155,7 @@ Rationale:
 
 ## Current recommendation
 
-Treat `SimianSyndicate` as the dedicated Simian Syndicate database.
-
-Create LA Logic as a separate database when ready. Do **not** add LA Logic as a second company inside `SimianSyndicate`, especially given LA Logic's financial compliance role.
+Treat `SimianSyndicate` as the dedicated Simian Syndicate database and `lalogic` as the dedicated LA Logic database. Do **not** add LA Logic as a second company inside `SimianSyndicate`, especially given LA Logic's financial compliance role.
 
 ## Safe probe commands used
 

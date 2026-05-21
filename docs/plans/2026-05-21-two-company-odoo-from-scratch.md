@@ -141,7 +141,7 @@ Files to create:
 Confirmed two-database topology:
 
 - Database 1: `SimianSyndicate` — existing live Simian Syndicate database
-- Database 2: `LALogic` — planned LA Logic database
+- Database 2: `lalogic` — existing live LA Logic database, created lowercase by Odoo/PostgreSQL
 
 For one multi-company database topology:
 
@@ -199,6 +199,7 @@ Rules:
 
 - No shared admin account for integrations.
 - Dedicated bot/API user per database or per company.
+- Current API users: `hermes@simiansyndicate.co.za` for `SimianSyndicate`; `hermes@lalogic.co.za` for `lalogic`.
 - Minimum permissions for API users.
 - API keys are generated in Odoo UI and never committed.
 - JSON-2 is the default API path for Odoo 19 self-hosted Community.
