@@ -17,9 +17,9 @@ Last updated: 2026-05-21
 | Odoo edition | Odoo Community Edition 19 | User-confirmed; version endpoint reports `19.0-20260504` |
 | Odoo version | `19.0-20260504` | Confirmed via `/web/version` |
 | Odoo server | `Werkzeug/3.0.1 Python/3.12.3` | Confirmed from response headers |
-| Database list | `SimianSyndicate` | Confirmed via `/web/database/list` |
+| Database list | `SimianSyndicate`, `lalogic` | Confirmed via `/web/database/list` |
 | Website state | Basic Odoo website template | User-confirmed; Odoo template pages visible over HTTPS |
-| Database list | `SimianSyndicate` | Confirmed through `https://www.simiansyndicate.co.za/web/database/list` |
+| Database list | `SimianSyndicate`, `lalogic` | Confirmed through `https://www.simiansyndicate.co.za/web/database/list` |
 | JSON-2 endpoint | `/json/2/res.users/context_get` | Confirmed present over HTTPS; unauthenticated request returns `401` with API-key message when `X-Odoo-Database: SimianSyndicate` is provided |
 | Remaining proxy/config note | Odoo generated metadata still exposes `http://...` canonical/og URLs during probe | Likely needs Odoo `proxy_mode` / `web.base.url` review after proxy changes |
 
@@ -110,15 +110,20 @@ Decision: **Simian Syndicate and LA Logic will use separate Odoo databases.**
 Current database:
 
 - `SimianSyndicate` — Simian Syndicate
+- `lalogic` — LA Logic
 
 Planned database:
 
-- `LALogic` — LA Logic
+- None currently; LA Logic database has been created as lowercase `lalogic`.
 
 Creation status:
 
-- `https://www.simiansyndicate.co.za/web/database/list` currently returns only `SimianSyndicate`.
-- Creating `LALogic` requires the Odoo database manager/master password or direct server/container access. The existing `Hermes Admin` database API key can administer records inside `SimianSyndicate`, but it cannot create a new PostgreSQL/Odoo database by itself.
+- `https://www.simiansyndicate.co.za/web/database/list` currently returns `SimianSyndicate` and `lalogic`.
+- Authenticated access to `lalogic` was verified with the LA Logic admin login supplied by Erwin on 2026-05-21.
+- The database was created lowercase as `lalogic`; use this exact database name in API headers and scripts, not `LALogic`.
+- Initial LA Logic company record still shows Odoo default company name `My Company`; rename/configure it to `LA Logic` during setup.
+- Initial `web.base.url` in `lalogic` is `http://www.simiansyndicate.co.za`; update/freeze it to the intended LA Logic public URL once the domain/routing decision is made.
+- The Odoo Community `account` / **Invoicing** module is currently uninstalled in `lalogic`.
 
 Rationale:
 
