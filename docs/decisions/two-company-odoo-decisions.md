@@ -82,9 +82,10 @@ Post-change public verification:
 - `https://www.simiansyndicate.co.za/web/login` serves Odoo.
 - Canonical URLs now use `https://www.simiansyndicate.co.za/...`.
 - Direct `:8069` URLs no longer appear in the checked public HTML.
-- Remaining issue: OpenGraph `og:url` metadata still reports `http://www.simiansyndicate.co.za/...`. This likely requires server-side proxy config review: Odoo `proxy_mode = True` and Nginx Proxy Manager forwarding of `X-Forwarded-Proto https` / related headers. This cannot be fully changed from inside the Odoo database alone.
+- Odoo `proxy_mode = True` was enabled in the container config and the Odoo service was restarted. Direct Odoo-port probing with forwarded HTTPS headers now generates HTTPS `og:url` metadata, confirming Odoo proxy-mode behavior is active.
+- Remaining issue: public HTTPS through Nginx Proxy Manager still returns OpenGraph `og:url` metadata as `http://www.simiansyndicate.co.za/...`. Because direct Odoo probing works when `X-Forwarded-Proto: https` is supplied, the remaining problem is likely that Nginx Proxy Manager / upstream routing is not forwarding the HTTPS proto header to Odoo as expected.
 
-Follow-up needed on Zimaboard/Nginx Proxy Manager/Odoo service config:
+Follow-up needed on Zimaboard/Nginx Proxy Manager forwarding config:
 
 ```nginx
 proxy_set_header Host $host;
