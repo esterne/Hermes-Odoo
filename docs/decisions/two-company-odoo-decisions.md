@@ -120,6 +120,7 @@ Changes made:
 - Stored the LA Logic API key only in Cael's local secret env file `~/.hermes/profiles/cael/.env`; it is not committed to the repo or stored in `ens-files`.
 - Verified JSON-2 access using the new API key: `POST https://www.simiansyndicate.co.za/json/2/res.users/context_get` returned `200` with `X-Odoo-Database: lalogic`.
 - Left Odoo Community `account` / **Invoicing** uninstalled in `lalogic` pending an explicit module-baseline decision.
+- Verified the human/admin login `ls@lalogic.co.za` exists in `lalogic`, is active, is an internal user, belongs to company `LA Logic`, and can log in via the web UI. No password is stored in the repo.
 
 ## Current topology decision
 
