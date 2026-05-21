@@ -47,6 +47,48 @@ Recommended next changes, after confirmation:
 4. Verify OpenResty passes `X-Forwarded-Host`, `X-Forwarded-Proto`, `X-Forwarded-For`, and `X-Real-IP` to Odoo.
 5. Create a dedicated `Hermes Admin` user and API key, then rotate/remove temporary admin access.
 
+## Authenticated configuration changes
+
+Applied on 2026-05-21 after Erwin approved changing settings.
+
+Changes made:
+
+- Updated `ir.config_parameter:web.base.url` from `http://www.simiansyndicate.co.za` to `https://www.simiansyndicate.co.za`.
+- Added `ir.config_parameter:web.base.url.freeze = True` because Odoo auto-reverted the base URL back to HTTP when the freeze flag was absent.
+- Updated company `Simian Syndicate` website from `http://www.simiansyndicate.co.za` to `https://www.simiansyndicate.co.za`.
+- Created internal admin/settings user `Hermes Admin` with login `hermes@simiansyndicate.co.za`.
+- Assigned `Hermes Admin` to the internal user and settings/admin groups.
+- Created one persistent API key for `Hermes Admin` named `Hermes Agent JSON-2 access`.
+- Stored the API key only in Cael's local secret env file `~/.hermes/profiles/cael/.env`; it is not committed to the repo or stored in `ens-files`.
+- Verified JSON-2 access using the new API key: `POST https://www.simiansyndicate.co.za/json/2/res.users/context_get` returned `200` with `X-Odoo-Database: SimianSyndicate`.
+
+Post-change public verification:
+
+- `http://www.simiansyndicate.co.za` redirects to HTTPS.
+- `https://www.simiansyndicate.co.za/` serves Odoo.
+- `https://www.simiansyndicate.co.za/web/login` serves Odoo.
+- Canonical URLs now use `https://www.simiansyndicate.co.za/...`.
+- Direct `:8069` URLs no longer appear in the checked public HTML.
+- Remaining issue: OpenGraph `og:url` metadata still reports `http://www.simiansyndicate.co.za/...`. This likely requires server-side proxy config review: Odoo `proxy_mode = True` and OpenResty `X-Forwarded-Proto https` / related headers. This cannot be fully changed from inside the Odoo database alone.
+
+Follow-up needed on Zimaboard/OpenResty/Odoo service config:
+
+```nginx
+proxy_set_header Host $host;
+proxy_set_header X-Forwarded-Host $host;
+proxy_set_header X-Forwarded-Proto https;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Real-IP $remote_addr;
+```
+
+And in Odoo config:
+
+```ini
+proxy_mode = True
+```
+
+After changing service config, restart Odoo/OpenResty and re-check `og:url`.
+
 ## Current topology decision
 
 Decision: **Simian Syndicate and LA Logic will use separate Odoo databases.**
