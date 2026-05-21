@@ -57,6 +57,7 @@ Changes made:
 - Added `ir.config_parameter:web.base.url.freeze = True` because Odoo auto-reverted the base URL back to HTTP when the freeze flag was absent.
 - Updated company `Simian Syndicate` website from `http://www.simiansyndicate.co.za` to `https://www.simiansyndicate.co.za`.
 - Created internal admin/settings user `Hermes Admin` with login `hermes@simiansyndicate.co.za`.
+- Corrected `Hermes Admin` email/contact address to Cael's AgentMail address: `cael.ai@agentmail.to`.
 - Assigned `Hermes Admin` to the internal user and settings/admin groups.
 - Created one persistent API key for `Hermes Admin` named `Hermes Agent JSON-2 access`.
 - Stored the API key only in Cael's local secret env file `~/.hermes/profiles/cael/.env`; it is not committed to the repo or stored in `ens-files`.
