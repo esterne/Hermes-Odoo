@@ -173,8 +173,11 @@ Changes made:
 
 Routing note:
 
-- The shared public host still has multiple Odoo databases behind one hostname, so a normal browser request to `https://www.simiansyndicate.co.za/` may show the database selector unless the database is selected by proxy/dbfilter/session.
-- A proper public LA Logic website should use a LA Logic domain/subdomain routed to Odoo with database selection configured for `lalogic`.
+- The shared public host has multiple Odoo databases behind one hostname. A normal browser request to `https://www.simiansyndicate.co.za/` shows the Odoo database selector because Odoo cannot choose between `SimianSyndicate` and `lalogic` without host/database routing.
+- `www.lalogic.co.za` already resolves to the Odoo host IP, but currently presents the `www.simiansyndicate.co.za` TLS certificate and still lands on `/web/database/selector` if certificate verification is bypassed.
+- The LA Logic page itself is valid: it renders correctly when the request is made with `X-Odoo-Database: lalogic`.
+- LA Logic database metadata has been updated to `https://www.lalogic.co.za` for `web.base.url`, `web.base.url.freeze`, company website, and website branding.
+- Required host-level fix: create/update the `www.lalogic.co.za` Nginx Proxy Manager proxy host, attach a Let's Encrypt certificate for `www.lalogic.co.za`, route it to Odoo, and select the `lalogic` database either via proxy header `X-Odoo-Database: lalogic` or an Odoo `dbfilter` strategy.
 
 Detailed website note: `docs/config/la-logic-website-placeholder.md`.
 
