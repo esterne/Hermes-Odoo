@@ -156,6 +156,28 @@ Verification:
 
 Detailed module baseline: `docs/config/module-baseline.md`.
 
+## LA Logic website placeholder
+
+Applied on 2026-05-22 through the `lalogic` database's dedicated `Hermes Admin` JSON-2 API key.
+
+Changes made:
+
+- Installed Website / `website` in `lalogic`.
+- Renamed the website record to `LA Logic`.
+- Set the homepage URL to `/`.
+- Replaced the default empty homepage with a simple custom placeholder landing page.
+- Added LA Logic content: financial compliance, systems, advisory, South Africa/ZAR context, and `ls@lalogic.co.za` contact links.
+- Visually hid the default Odoo website header/footer on the homepage so demo links, demo phone number, and Odoo branding do not appear.
+- Hid the accessibility skip link until keyboard focus.
+- Verified the rendered LA Logic page using `X-Odoo-Database: lalogic`; page title is `LA Logic | LA Logic` and the placeholder content renders correctly.
+
+Routing note:
+
+- The shared public host still has multiple Odoo databases behind one hostname, so a normal browser request to `https://www.simiansyndicate.co.za/` may show the database selector unless the database is selected by proxy/dbfilter/session.
+- A proper public LA Logic website should use a LA Logic domain/subdomain routed to Odoo with database selection configured for `lalogic`.
+
+Detailed website note: `docs/config/la-logic-website-placeholder.md`.
+
 ## Current topology decision
 
 Decision: **Simian Syndicate and LA Logic will use separate Odoo databases.**
