@@ -122,6 +122,40 @@ Changes made:
 - Left Odoo Community `account` / **Invoicing** uninstalled in `lalogic` pending an explicit module-baseline decision.
 - Verified the human/admin login `ls@lalogic.co.za` exists in `lalogic`, is active, is an internal user, belongs to company `LA Logic`, and can log in via the web UI. No password is stored in the repo.
 
+## Module baseline installation
+
+Applied on 2026-05-22 through each database's dedicated `Hermes Admin` JSON-2 API key.
+
+Simian Syndicate database `SimianSyndicate` now has the baseline plus extras installed:
+
+- Contacts / `contacts`
+- CRM / `crm`
+- Sales / `sale_management`
+- Invoicing / Accounting / `account`
+- South Africa Accounting / `l10n_za`
+- Inventory / `stock`
+- Purchase / `purchase`
+- eCommerce / `website_sale`
+
+LA Logic database `lalogic` now has the baseline installed:
+
+- Contacts / `contacts`
+- Invoicing / Accounting / `account`
+- South Africa Accounting / `l10n_za`
+- CRM / `crm`
+- Sales / `sale_management`
+- Project / `project`
+
+Verification:
+
+- All listed modules report `state = installed` through JSON-2.
+- `SimianSyndicate` company remains `Simian Syndicate`, South Africa, ZAR.
+- `lalogic` company remains `LA Logic`, South Africa, ZAR.
+- Accounting journals exist in both databases.
+- `Hermes Admin` has accounting administrator access where needed for API inspection/configuration.
+
+Detailed module baseline: `docs/config/module-baseline.md`.
+
 ## Current topology decision
 
 Decision: **Simian Syndicate and LA Logic will use separate Odoo databases.**
