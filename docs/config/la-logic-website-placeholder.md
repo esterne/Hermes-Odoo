@@ -46,10 +46,11 @@ Focus areas:
 - Operational clarity
 - Built to grow
 
-Footer contact email:
+Contact links:
 
-- Removed from the bottom/footer of the placeholder page on 2026-05-22.
-- The primary `Contact LA Logic` button still uses `mailto:ls@lalogic.co.za` unless changed later.
+- Removed `ls@lalogic.co.za` from the bottom/footer of the placeholder page on 2026-05-22.
+- Removed the primary `Contact LA Logic` button from the hero section on 2026-05-22.
+- The hero now keeps only the `View focus areas` button.
 
 ## Odoo default chrome
 

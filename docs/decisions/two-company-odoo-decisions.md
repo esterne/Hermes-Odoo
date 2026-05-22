@@ -166,7 +166,8 @@ Changes made:
 - Renamed the website record to `LA Logic`.
 - Set the homepage URL to `/`.
 - Replaced the default empty homepage with a simple custom placeholder landing page.
-- Added LA Logic content: financial compliance, systems, advisory, South Africa/ZAR context, and `ls@lalogic.co.za` contact links.
+- Added LA Logic content: financial compliance, systems, advisory, and South Africa/ZAR context.
+- Removed the visible `ls@lalogic.co.za` footer email and the `Contact LA Logic` hero button from the placeholder page on 2026-05-22.
 - Visually hid the default Odoo website header/footer on the homepage so demo links, demo phone number, and Odoo branding do not appear.
 - Hid the accessibility skip link until keyboard focus.
 - Verified the rendered LA Logic page using `X-Odoo-Database: lalogic`; page title is `LA Logic | LA Logic` and the placeholder content renders correctly.
