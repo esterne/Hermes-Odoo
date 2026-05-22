@@ -39,6 +39,18 @@ Odoo's hosted-plan documentation says JSON-2 availability is restricted on hoste
 10. [Source evidence log](docs/10-source-evidence.md)
 11. [Deployment caveat: hosted plans vs self-hosted Community](docs/11-deployment-caveat-hosted-vs-self-hosted.md)
 
+## Live setup / agent handoff docs
+
+- [LA Logic Odoo AI agent handoff](docs/agent-handoff/la-logic-ai-agent-handoff.md) — start here for another agent administering LA Logic.
+- [Two-company Odoo decisions](docs/decisions/two-company-odoo-decisions.md)
+- [Module baseline](docs/config/module-baseline.md)
+- [LA Logic website placeholder](docs/config/la-logic-website-placeholder.md)
+
+## Exported agent skill
+
+- [Odoo administration skill](skills/odoo-administration/SKILL.md)
+- [Odoo skill references](skills/odoo-administration/references/)
+
 ## Examples
 
 - [Python JSON-2 client](examples/python/json2_client.py)
