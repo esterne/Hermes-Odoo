@@ -46,9 +46,10 @@ Focus areas:
 - Operational clarity
 - Built to grow
 
-Contact email displayed:
+Footer contact email:
 
-- `ls@lalogic.co.za`
+- Removed from the bottom/footer of the placeholder page on 2026-05-22.
+- The primary `Contact LA Logic` button still uses `mailto:ls@lalogic.co.za` unless changed later.
 
 ## Odoo default chrome
 
